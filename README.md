@@ -68,18 +68,18 @@ The [Verification Academy](http://www.verificationacademy.com/) provides a compr
 A book that covers some of the course is:
 
 ```
-    Janick Bergeron
-    Writing Testbenches: Functional Verification of HDL Models
-    First Edition, Kluwer Academic Publishers, 2000, ISBN: 0-7923-7766-4
-    Second Edition, Kluwer Academic Publishers, 2003, ISBN: 1-4020-7401-8 
+Janick Bergeron
+Writing Testbenches: Functional Verification of HDL Models
+First Edition, Kluwer Academic Publishers, 2000, ISBN: 0-7923-7766-4
+Second Edition, Kluwer Academic Publishers, 2003, ISBN: 1-4020-7401-8 
 ```
 
 In May 2005 a comprehensive textbook on Design Verification was published:
 
 ```
-    Bruce Wile, John Goss and Wolfgang Roesner
-    Comprehensive Functional Verification
-    Elsevier, 2005, ISBN: 0-12-751803-7 
+Bruce Wile, John Goss and Wolfgang Roesner
+Comprehensive Functional Verification
+Elsevier, 2005, ISBN: 0-12-751803-7 
 ```
 
 Both books are available in the QB library.
