@@ -180,6 +180,15 @@ Files needed for the SpecMan tutorial:
 - [specman_tutorial.pdf](SN-CPU-Tutorial/specman_tutorial.pdf)
 
 
+## FAQs
+
+For some answers to frequently asked questions about Verilog and Specman/E, please see the following pages.
+
+* [Writing testbenches with Specman/E](FAQs/dv_lab_specman)
+* [Writing testbenches with Verilog](FAQs/dv_lab_verilog)
+* [Gluing Verilog modules together](FAQs/glue)
+* [Generating random numbers in Verilog](FAQs/random)
+
 
 ## Credits
 
