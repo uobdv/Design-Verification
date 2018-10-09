@@ -166,13 +166,13 @@ Files needed for the ModelSim introduction:
     
 ### Exercise 4
 
-***[Introduction to SpecMan Elite](TODO)***
+***[Introduction to SpecMan Elite](SN-CPU-Tutorial/sn_cpu_tutorial.pdf)***
 
-SpecMan Elite is part of the Incisive Functional Verification platform provided by [Cadence](TODO).
+SpecMan Elite is part of the Incisive Functional Verification platform provided by [Cadence](http://www.cadence.com/).
 
 Files needed for the SpecMan tutorial:
     
-- [sn_cpu_tutorial.tar.gz](SN-CPU-Tutorial/sn_cpu_tutorial.pdf)
+- [sn_cpu_tutorial.tar.gz](SN-CPU-Tutorial/sn_cpu_tutorial.tar.gz)
 - [specman_tutorial.pdf](SN-CPU-Tutorial/specman_tutorial.pdf)
 
 
