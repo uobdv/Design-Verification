@@ -88,7 +88,7 @@ for {initial-action; bool-exp; step-action} [do] {action;?}
 ```
 
 ```E
-for {{i=40; j=0}; i>=0; {i-=2; j+=1}} do {
+for { {i=40; j=0}; i>=0; {i-=2; j+=1} } do {
     outf("%b : %d",i,j);
 };
 ```
