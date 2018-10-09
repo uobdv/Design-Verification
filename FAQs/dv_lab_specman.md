@@ -1,3 +1,7 @@
+---
+title: Writing testbenches with Specman
+---
+
 ## Writing testbenches with Specman
 
 ### Q: How to colorize Specman keywords in an editor?

@@ -1,3 +1,6 @@
+---
+title: Writing testbenches with Verilog
+---
 ## Writing testbenches with Verilog
 
 ### Q: How to colorize Verilog keywords in an editor?

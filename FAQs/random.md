@@ -1,3 +1,7 @@
+---
+title: How to generate random numbers in Verilog?
+---
+
 ## How to generate random numbers in Verilog?
 
 Verilog has a system call (`$random`) that handles this. It returns a signed 32 bit integer. It is used as follows:

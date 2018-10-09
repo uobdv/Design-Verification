@@ -1,3 +1,7 @@
+---
+title: Gluing code together in Verilog
+---
+
 ## Gluing code together in Verilog
 
 Verilog glue logic is simple but it has a few restrictions.

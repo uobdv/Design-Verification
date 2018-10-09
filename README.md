@@ -1,3 +1,7 @@
+---
+title: COMS31700: Design Verification (UoB)
+---
+
 ## Welcome to Design Verification
 
 Hello, welcome to the Design Verification module (COMS31700) website. Here you'll find all the course content and related information. Assessment materials are hosted privately on Blackboard at the University of Bristol. For further information about this course, please contact Kerstin Eder.
