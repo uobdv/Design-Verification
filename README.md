@@ -40,22 +40,23 @@ This unit familiarises students with the state of the art in Design Verification
 
 | # | Topic | Print | View | Slides | Supplementary material |
 |---|-------|-------|------|--------|------------------------|
-| 1 | Introduction | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | |
-| 2 | Verification Hierarchy / Driving & Checking | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | |
-| 3 | Verification Tools / Directed Testing | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | |
-| 4 | Hardware Design Languages | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | |
-| 5 | Verification Cycle, Methodology & Plans | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | |
-| 6 | Coverage | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | |
-| 7 | Stimuli Generation | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | |
-| 8 | Checking | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | |
-| 9 | High-level Verification: sn and e | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | |
-| 10 | Assertion Based Verification | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | |
-| 11 | Closing the Cycle | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | |
-| 12 | Block-level Case-study including Formal Functional Verification | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | |
+| 1 | Introduction | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | [Verification challenges](Supplementary/)<br>[Intelligent Testing (Dot Graham)](Supplementary/) |
+| 2 | Verification Hierarchy / Driving & Checking | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | [Foster: Provably Correct Design](Supplementary/) |
+| 3 | Verification Tools / Directed Testing | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | [ITRS Reports](Supplementary/) |
+| 4 | Hardware Design Languages | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | BOOK: Verilog HDL by Samir Palnitkar \[in QB Library] |
+| 5 | Verification Cycle, Methodology & Plans | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | [I'm done simulating: Now what?](Supplementary/) |
+| 6 | Coverage | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | [Why statement coverage is not enough](Supplementary/)<br>[An introduction to FSM coverage](Supplementary/)<br>[A practical tutorial on MC/DC coverage](Supplementary/) |
+| 7 | Stimuli Generation | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | [Verification plan template](Supplementary/)<br>[GenesysPro: Innovations in Test Program Generation for Functional Processor Verification](Supplementary/) |
+| 8 | Checking | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | [Design Verification Glossary](Supplementary/)<br>[Mentor Graphics Verification Academy Glossary](Supplementary/) |
+| 9 | High-level Verification: sn and e | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | [The e Language: A fresh separation of concerns](Supplementary/) |
+| 10 | Assertion Based Verification | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | [ModelSim PSL quick reference card](Supplementary/) |
+| 11 | Closing the Cycle | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | [IEE Stress Tests by Darren Galphin](Supplementary/)<br>[Functional verification of IBM's POWER7 processor core](Supplementary/) |
+| 12 | Block-level Case-study including Formal Functional Verification | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | [PSL quick reference card for Verilog](Supplementary/)<br>[PSL quick reference card for VHDL](Supplementary/) |
 | 13 | SoC Verification (Guest Lecture by Mike Benjamin, TVS) | [Print](Lectures/) | [View](Lectures/) | [PowerPoint](Lectures/) | |
-| - | Industry trends | | | [PowerPoint](Extra-Lectures/) | |
-| - | Highlights from 2017 Wilson Reserach Group Functional Verification study | | | [PowerPoint](Extra-Lectures/) | |
+| - | Industry trends | | | [PowerPoint](Extra-Lectures/) | by Harry Foster, Chief Verification Scientist at Mentor Graphics |
+| - | Highlights from 2017 Wilson Reserach Group Functional Verification study | | | [PowerPoint](Extra-Lectures/) | by Harry Foster, Chief Verification Scientist at Mentor Graphics |
 
+[Download all course content (ZIP archive)](TODO)
 
 ### Online resources
 
