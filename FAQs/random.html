@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Desktop/vlog/random.v.html</title>
+<meta name="Generator" content="Vim/7.4">
+<meta name="plugin-version" content="vim7.4_v1">
+<meta name="syntax" content="verilog">
+<meta name="settings" content="use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Statement { color: #a52a2a; font-weight: bold; }
+.PreProc { color: #800080; }
+.Constant { color: #ff00ff; }
+.Special { color: #6a5acd; }
+.Comment { color: #0000ff; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+How to generate random numbers in Verilog<span class="Special">?</span>
+
+Verilog has a system call <span class="Special">(</span><span class="PreProc">$random</span><span class="Special">)</span> that handles this<span class="Special">.</span> It returns a signed 32 bit <span class="Statement">integer</span><span class="Special">.</span> It is used as follows<span class="Special">:</span>
+
+<span class="Statement">module</span> rand<span class="Special">();</span>
+<span class="Statement">integer</span> mynumber<span class="Special">;</span>
+
+<span class="Statement">initial</span> <span class="Statement">begin</span>
+	mynumber <span class="Special">=</span> <span class="PreProc">$random</span><span class="Special">;</span>
+<span class="Statement">end</span>
+
+<span class="Statement">endmodule</span>
+
+If random numbers in a certain range are required<span class="Special">,</span> this can be achieved with the following code<span class="Special">:</span>
+
+<span class="Statement">module</span> rand<span class="Special">();</span>
+<span class="Statement">integer</span> mynumber<span class="Special">;</span>
+
+<span class="Statement">initial</span> <span class="Statement">begin</span>
+	mynumber <span class="Special">=</span> <span class="Special">{</span><span class="PreProc">$random</span><span class="Special">}</span> <span class="Special">%</span><span class="Constant">10</span> <span class="Special">;</span> <span class="Comment">// random numbers between 0 and 9.</span>
+<span class="Statement">end</span>
+<span class="Statement">endmodule</span>
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

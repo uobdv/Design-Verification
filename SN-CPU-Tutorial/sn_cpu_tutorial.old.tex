@@ -1,0 +1,89 @@
+\documentclass[a4paper,11pt]{article}
+
+\setlength{\textwidth}{170mm}    \setlength{\textheight}{250mm}
+\setlength{\parindent}{0Em}      \setlength{\parskip}{1ex}
+\setlength{\topmargin}{0mm}      
+\setlength{\headheight}{0mm}     \setlength{\headsep}{0mm} 
+\setlength{\evensidemargin}{-10mm} \setlength{\oddsidemargin}{-10mm}
+
+\newcommand{\stp}{\ensuremath{\mathit{STOP}}}
+\newcommand{\ra}{\ensuremath{\rightarrow}}
+\newcommand{\te}{\ensuremath{\sqsubseteq_T}}
+\newcommand{\tr}[1]{\ensuremath{\mathit{traces(#1)}}}
+\newcommand{\trc}[1]{\ensuremath{\mathit{\langle #1 \rangle}}}
+
+\usepackage{times}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+{\Large\bf DESIGN VERIFICATION Exercise 4: \\ 
+\smallskip Introduction to SpecMan Elite}
+\end{center}
+
+\begin{quote}
+  This exercise introduces you to SpecMan Elite. It gives you the opportunity
+  to investigate some of the functionality of SpecMan Elite on a CPU example
+  DUV. SpecMan will be used in the second DESIGN VERIFICATION assignment to
+  write a sophisticated testbench for the calc1 design, so it is worth you
+  investing some time into getting to know your tools better. SpecMan Elite is
+  is part of the Incisive functional verification platform by Cadence.
+  (\verb#http://www.cadence.com#)
+  
+  All files referred to in this exercise are available on the unit web
+  pages. This sheet should be sufficient to get you started with SpecMan Elite. 
+  If there are problems, please let me know. \\ Have fun! \\
+  \hspace*{125mm} Kerstin
+\end{quote}
+
+\smallskip
+\noindent {\Large\bf Getting Started}
+\smallskip
+
+\begin{enumerate}
+
+\item Make sure you include {\tt /usr/local/cds2013/Incisive/tools/bin} into
+  your PATH (variable). For instance, if you use the bash shell, it is best to
+  do this in your {\tt .bashrc} file.
+
+\verb#export PATH=/usr/local/cds2013/Incisive/tools/bin/:$PATH#\\
+
+Remember that changes in the file .bashrc are only effective when you call bash
+next time.
+
+\item To activate {\bf help} type:
+
+\verb#cdnshelp &#
+
+at a terminal window. This should open up the Cadence Help Browser. Go to the
+``Edit'' menu, select the ``General'' tab and change the 
+``Default Navigation View'' to ``Show Tree View on startup''.
+
+
+\item Create a directory in your home directory for this exercise, 
+and move into it:
+
+\verb#mkdir SpecManTutorial#\\
+\verb#cd SpecManTutorial#
+
+Download the tutorial files from the unit web page, unzip and untar them.
+
+\verb#gunzip sn_cpu_tutorial.tar.gz#\\
+\verb#tar xfv sn_cpu_tutorial.tar#
+
+Make sure you read the \verb#README#.
+
+\end{enumerate}
+
+\smallskip
+\noindent {\Large\bf SpecMan Elite Tutorial}
+\smallskip The file \verb#specman_tutorial.pdf# in the \verb#docs# directory
+contains a comprehensive SpecMan Elite tutorial for an example CPU design. Both
+the CPU and the testbench are modelled in e - this allows high-level modelling
+and verification without the need for a simulator to run the tutorial. You are
+expected to work your way through the tasks related to the tutorial during lab
+sessions with an emphasis on learning how to use SpecMan, understanding e code
+and the verification-specific features of the e language, as well as the
+verification methodology.
+
+\end{document}

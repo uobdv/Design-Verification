@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Desktop/vlog/outer.v.html</title>
+<meta name="Generator" content="Vim/7.4">
+<meta name="plugin-version" content="vim7.4_v1">
+<meta name="syntax" content="verilog">
+<meta name="settings" content="use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Statement { color: #a52a2a; font-weight: bold; }
+.Comment { color: #0000ff; }
+.Constant { color: #ff00ff; }
+.Special { color: #6a5acd; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+Verilog glue logic is simple but it has a few restrictions<span class="Special">.</span>
+
+First<span class="Special">,</span> let us create a simple module with one <span class="Statement">input</span> named in_a and two outputs named out_b<span class="Special">/</span>out_c<span class="Special">,</span> as shown below<span class="Special">:</span>
+
+<span class="Statement">module</span> simple <span class="Special">(</span>in_a<span class="Special">,</span> out_b<span class="Special">,</span> out_c<span class="Special">);</span>
+
+<span class="Statement">input</span> in_a<span class="Special">;</span> <span class="Comment">// if a type is not mentioned then it defaults to wire</span>
+<span class="Statement">output</span> out_b<span class="Special">;</span> <span class="Comment">// so this is a wire</span>
+<span class="Statement">output</span> <span class="Statement">reg</span> out_c<span class="Special">;</span> <span class="Comment">// and this is a reg</span>
+
+<span class="Comment">// some logic here</span>
+
+<span class="Statement">endmodule</span>
+
+Now let us create another module that will instantiate our simple module<span class="Special">.</span> We will call it top<span class="Special">.</span> From top's point of view<span class="Special">,</span> in_a<span class="Special">,</span> out_b<span class="Special">,</span> and out_c behave differently<span class="Special">,</span> regardless of what type <span class="Special">(</span><span class="Statement">reg</span> or <span class="Statement">wire</span><span class="Special">)</span> they were originally declared as<span class="Special">.</span> What matters is if they are inputs or outputs<span class="Special">.</span> This limits what you can do<span class="Special">:</span> you can drive data into in_a because it is an <span class="Statement">input</span><span class="Special">,</span> but you cannot drive data into the outputs<span class="Special">.</span> Here is an example of a valid way to connect simple to top<span class="Special">:</span>
+
+<span class="Statement">module</span> top <span class="Special">();</span>
+
+<span class="Statement">wire</span> mya<span class="Special">;</span>
+<span class="Statement">wire</span> myb<span class="Special">;</span>
+<span class="Statement">wire</span> myc<span class="Special">;</span>
+
+<span class="Statement">assign</span> mya <span class="Special">=</span> <span class="Constant">0</span><span class="Special">;</span> <span class="Comment">// assigns can only be used with wires</span>
+
+simple simple<span class="Special">(</span>mya<span class="Special">,</span> myb<span class="Special">,</span> myc<span class="Special">);</span>
+
+<span class="Statement">endmodule</span>
+
+You can have multiple instances of simple if you want to<span class="Special">.</span> Here is an example<span class="Special">:</span>
+
+<span class="Statement">module</span> top <span class="Special">();</span>
+
+<span class="Statement">wire</span> mya<span class="Special">;</span>
+<span class="Statement">wire</span> myb<span class="Special">;</span>
+<span class="Statement">wire</span> myc<span class="Special">;</span>
+<span class="Statement">wire</span> myd<span class="Special">;</span>
+<span class="Statement">wire</span> mye<span class="Special">;</span>
+
+<span class="Statement">assign</span> mya <span class="Special">=</span> <span class="Constant">0</span><span class="Special">;</span>
+
+simple simple1 <span class="Special">(</span>mya<span class="Special">,</span> myb<span class="Special">,</span> myc<span class="Special">);</span>
+simple simple2 <span class="Special">(</span>mya<span class="Special">,</span> myd<span class="Special">,</span> mye<span class="Special">);</span>
+
+<span class="Statement">endmodule</span>
+
+Note that mya can be used to drive two different inputs<span class="Special">.</span> That is fine because you still have only one source of data<span class="Special">.</span> However<span class="Special">,</span> each <span class="Statement">output</span> of simple has to be connected to different wires in top<span class="Special">,</span> otherwise one <span class="Statement">wire</span> would end up with two data sources<span class="Special">.</span> That is not allowed<span class="Special">.</span>
+
+Another valid glue logic is shown below<span class="Special">.</span> The difference is that mya is now a <span class="Statement">reg</span><span class="Special">.</span> Per verilog assignment rules<span class="Special">,</span> you cannot use the assign keyword with regs<span class="Special">.</span> One must use an always statement as shown below<span class="Special">.</span> This example is functionally identical to the one using assign<span class="Special">.</span>
+
+<span class="Statement">module</span> top <span class="Special">();</span>
+
+<span class="Statement">reg</span> mya<span class="Special">;</span>
+<span class="Statement">wire</span> myb<span class="Special">;</span>
+<span class="Statement">wire</span> myc<span class="Special">;</span>
+
+<span class="Statement">always</span> <span class="Special">@</span> <span class="Special">(*)</span> <span class="Statement">begin</span>
+	mya <span class="Special">=</span> <span class="Constant">0</span> <span class="Special">;</span>
+<span class="Statement">end</span>
+
+simple simple<span class="Special">(</span>mya<span class="Special">,</span> myb<span class="Special">,</span> myc<span class="Special">);</span>
+
+<span class="Statement">endmodule</span>
+
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

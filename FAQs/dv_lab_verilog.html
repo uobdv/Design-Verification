@@ -1,0 +1,688 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-gb" xml:lang="en-gb">
+<head>
+<!--nomodify-->
+<meta name="style" content="cs" />
+<title>No Title</title>
+</head>
+<body>
+<h2><b><font face="Arial">COMS31700 - Design Verification Lab Q & A: Writing Testbench with Verilog</font></b></h2>
+
+
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman">
+<b>Q: How to colorize Verilog keywords in an editor? </b>
+</font>
+</span></p>
+
+<blockquote>
+  <p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman">
+  Emacs users please see.. 
+  <a href="http://www.verilog.com/emacs_install.html" target="verilog_emacs">
+  http://www.verilog.com/emacs_install.html</a>
+  </font> 
+  </span></p>
+</blockquote>
+
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman">&nbsp;
+</font>
+</span></p>
+
+
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman">
+<b>Q:When declaring a vector in Verilog, can we use [LSB:MSB] to represent the big-endian convention?</font></b>  
+</span></p>
+
+<blockquote>
+  <p class="MsoNormal"><font face="Times New Roman"><span lang="EN-US" style="mso-ansi-language:EN-US">
+  Vectors can be declared at [high#,low#] or [low#,high#], but the left number in the squared brackets is always the MSB of the vector. 
+  <b><font color="#FF0000">[MSB:LSB]</font></b>
+  </span> </font></p>
+  <p class="MsoNormal"><font face="Times New Roman"><span style="mso-ansi-language: EN-US" lang="EN-US">
+  Both
+  <font color="#FF0000"><b>MSB</b></font> constant expression and <font color="#FF0000"><b>LSB</b></font>
+  constant expression shall be <u>constant expressions</u> of any integer
+  value--<i>positive</i>, <i>negative</i>, or <i>zero</i>. <font color="#FF0000"><b>LSB</b></font>
+  constant expression can be a <i>greater</i>, <i>equal</i>, or <i>lesser</i>
+  value than <font color="#FF0000"><b>MSB</b></font> constant expression.</span><span lang="EN-US" style="mso-ansi-language:EN-US">
+  </span> </font></p>
+  <p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman">
+  To use the <b><font color="#FF0000"> little-endian</font></b> convention, set the LSB to the smallest bit number.
+  </font>
+  </span></p>
+</blockquote>
+
+<table border="1" cellspacing="0" cellpadding="0" width="499" style="width:374.4pt;
+ margin-left:36.0pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
+  <tr>
+    <td width="499" valign="top" style="width:374.4pt;border:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+      <p class="MsoNormal"><span lang="EN-US style="mso-ansi-language:EN-US"><font face="Arial" color="#0000FF"><font size="2">
+      output [7:0] result;
+      </font>
+      </font>
+      </span></p>
+    </td>
+  </tr>
+</table>
+
+<blockquote>
+  <p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman"> 
+  To use the <b> <font color="#FF0000"> big-endian</font></b> convention, set the LSB to the largest bit number.
+  </font>
+  </span></p>
+</blockquote>
+
+<table border="1" cellspacing="0" cellpadding="0" width="499" style="width:374.4pt;
+ margin-left:36.0pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
+  <tr>
+    <td width="499" valign="top" style="width:374.4pt;border:solid windowtext .5pt; padding:0cm 5.4pt 0cm 5.4pt">
+      <p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Arial" color="#0000FF"><font size="2">
+      inout  [0:15] data_bus;
+      </font>
+      </font>
+      </span></p>
+    </td>
+  </tr>
+</table>
+
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman">&nbsp;<o:p>
+</o:p>    
+</font>
+</span></p>
+
+
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><b><font face="Times New Roman"> 
+Q: Is it possible to use a variable to specify the range of a vector?</font></b><font face="Times New Roman">   
+</font>
+</span></p>
+
+<blockquote>
+  <p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman">
+  The range referencing in an expression must be a constant. Single bit can be referenced with a variable, but a vector cannot.
+  </font>
+  </span></p>
+</blockquote>
+
+<table border="1" cellspacing="0" cellpadding="0" width="499" style="width:374.4pt;
+ margin-left:36.0pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
+  <tr>
+    <td width="499" valign="top" style="width:374.4pt;border:solid windowtext .5pt; padding:0cm 5.4pt 0cm 5.4pt">
+      <p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Arial" color="#0000FF"><font size="2">
+      reg [0:7] A, B;<br>    
+      B = 3;<br>    
+      A[0:B] = 3'b111;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // illegal<br>   
+      A[B] = 1'b1;  
+      </font> 
+      </font>
+      </span></p>
+    </td>
+  </tr>
+</table>
+
+<blockquote>
+  <p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman">
+  The following example is, however, legal. The <b> <font color="#FF0000">parameter</font></b> 
+  statement allows the programmer to give constants a name and serves a similar role that the const keyword serves in C.
+  </font>
+  </span></p>
+</blockquote>
+
+<table border="1" cellspacing="0" cellpadding="0" width="499" style="width:374.4pt;
+ margin-left:36.0pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
+  <tr>
+    <td width="499" valign="top" style="width:374.4pt;border:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+      <p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font color="#0000FF"><font face="Arial" size="2">
+      parameter size = 8;<br>    
+      reg [size - 1:0] A;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // defines an 8-bit register  
+      </font><font face="Times New Roman">
+      </font>
+      </font>
+      </span></td>
+  </tr>
+</table>
+
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman">&nbsp;<o:p>
+</o:p>    
+</font>
+</span></p>
+
+
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman"><span style="mso-ansi-language: EN-US"><b>
+Q: Why my signed number calculation returned an incorrect number?</b></span></font></span></p>  
+
+<blockquote>
+  <p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman"><span style="mso-ansi-language: EN-US">
+  Integer numbers are <font color="#FF0000"><b>signed</b></font> (two's complement) or <b><font color="#FF0000">unsigned</font></b>.   
+  Verilog only &quot;keeps track&quot; of the sign of a negative constant if it is&nbsp;</span></font>  
+  </span></p>
+  <p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman"><span style="mso-ansi-language: EN-US">
+  (1) assigned to an integer</span></font></span><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Arial" size="2" color="#0000FF"><br>    
+  </font></span><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman"><span style="mso-ansi-language: EN-US">
+  (2) assigned to a parameter without using a base</span></font></span></p>
+  <p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman"><span style="mso-ansi-language: EN-US">
+  In other cases, even though the bit representations may be identical to the signed number (hexadecimal <code>fffffff4</code> 
+  in the following example), a negative constant is treated as an unsigned number. Once Verilog &quot;loses&quot; the sign, 
+  keeping track of signed numbers becomes your responsibility.</span></font>
+  </span></p>
+</blockquote>
+
+<table border="1" cellspacing="0" cellpadding="0" width="499" style="width:374.4pt;
+ margin-left:36.0pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
+  <tr>
+    <td width="499" valign="top" style="width:374.4pt;border:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+      <p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Arial" size="2" color="#0000FF"><span style="mso-ansi-language: EN-US">module   
+      negative_numbers;<span style="mso-ansi-language:EN-US"><br> 
+      &nbsp;&nbsp; parameter PA = -12, PB = -'d12, PC = -32'd12, PD = -4'd12;<br>    
+      &nbsp;&nbsp; integer IA , IB , IC , ID ;<br>   
+      &nbsp;&nbsp; reg [31:0] RA , RB , RC , RD ;<br>    
+      &nbsp;&nbsp; initial begin #1;<br>    
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IA = -12; IB = -'d12; IC = -32'd12; ID =   
+      -4'd12;<br> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RA = -12; RB = -'d12; RC = -32'd12; RD =   
+      -4'd12; #1;<br>    
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $display(&quot; parameter integer   
+      reg[31:0]&quot;);<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $display (&quot;-12 =&quot;,PA,IA,,,RA);<br>    
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $displayh(&quot;   
+      &quot;,,,,PA,,,,IA,,,,,RA);<br> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $display (&quot;-'d12 =&quot;,,PB,IB,,,RB);<br>    
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $displayh(&quot; &quot;,,,,PB,,,,IB,,,,,RB);<br>   
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $display (&quot;-32'd12 =&quot;,,PC,IC,,,RC);<br>    
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $displayh(&quot;   
+      &quot;,,,,PC,,,,IC,,,,,RC);<br> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $display (&quot;-4'd12 =&quot;,,,,,,,,,,PD,ID,,,RD);<br>    
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $displayh(&quot;   
+      &quot;,,,,,,,,,,,PD,,,,ID,,,,,RD);<br>
+      &nbsp;&nbsp; end<br>    
+      endmodule</span></span></font></span><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman">
+      </o:p>
+      </font></span></td>
+  </tr>
+</table>
+
+<blockquote>
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman">
+</o:p>Output: 
+</font>
+</span></p>
+</blockquote>
+
+<table border="1" cellspacing="0" cellpadding="0" width="497" style="border-collapse: collapse; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; border-style: none; border-width: medium; margin-left: 36.0pt">
+  <tr>
+    <td width="497" valign="top" style="border: .5pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+      <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt" width="461" height="172">
+        <tr>
+          <td width="72" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="19">
+            <pre><span lang="EN-US" style="font-family:&quot;Courier New&quot;;mso-ansi-language:EN-US"><font size="2" color="#008080"><o:p>
+</o:p>
+</font></span></pre>
+          </td>
+          <td width="17" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="left" height="19">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080">&nbsp;<span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="97" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="19">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">parameter</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="87" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="19">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">integer</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="108" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="19">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">reg[31:0]</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+        </tr>
+        <tr>
+          <td width="72" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="18">
+            <p class="MsoNormal"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">-12</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="17" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="left" height="18">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">=<span style="mso-spacerun: yes">&nbsp;   
+            </span></span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="97" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="18">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">-12</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="87" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="18">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">-12</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="108" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="18">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">4294967284</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+        </tr>
+        <tr>
+          <td width="72" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20">
+            <p class="MsoNormal"><font size="2" color="#008080">&nbsp;<span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="17" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="left" height="20">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080">&nbsp;<span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="97" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">fffffff4</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="87" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">fffffff4</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="108" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="20">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">fffffff4</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+        </tr>
+        <tr>
+          <td width="72" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="21">
+            <p class="MsoNormal"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">-'d12</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="17" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="left" height="21">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">=<span style="mso-spacerun: yes">&nbsp;   
+            </span></span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="97" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="21">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">4294967284</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="87" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="21">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">-12</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="108" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="21">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">4294967284</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+        </tr>
+        <tr>
+          <td width="72" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="21">
+            <p class="MsoNormal"><font size="2" color="#008080">&nbsp;<span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="17" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="left" height="21">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080">&nbsp;<span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="97" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="21">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">fffffff4</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="87" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="21">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">fffffff4</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="108" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="21">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">fffffff4</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+        </tr>
+        <tr>
+          <td width="72" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="18">
+            <p class="MsoNormal"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">-32'd12<span style="mso-spacerun: yes">
+            </span></span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="17" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="left" height="18">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">=<span style="mso-spacerun: yes">&nbsp;   
+            </span></span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="97" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="18">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">4294967284</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="87" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="18">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">-12</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="108" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="18">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">4294967284</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+        </tr>
+        <tr>
+          <td width="72" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="21">
+            <p class="MsoNormal"><font size="2" color="#008080">&nbsp;<span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="17" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="left" height="21">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080">&nbsp;<span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="97" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="21">
+            <p class="MsoNormal" align="right" style="text-align:right"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New"><font size="2" color="#008080">fffffff4<o:p>
+            </o:p>   
+            </font></span></p>
+          </td>
+          <td width="87" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="21">
+            <p class="MsoNormal" align="right" style="text-align:right"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New"><font size="2" color="#008080">fffffff4<o:p>
+            </o:p>
+            </font></span></p>
+          </td>
+          <td width="108" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="21">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">fffffff4</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+        </tr>
+        <tr>
+          <td width="72" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="22">
+            <p class="MsoNormal"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">-4'd12<span style="mso-spacerun: yes">
+            &nbsp;</span></span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>   
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="17" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" align="left" height="22">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">=<span style="mso-spacerun: yes">&nbsp;   
+            </span></span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="97" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="22">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">4</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="87" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="22">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">-12</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="108" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="22">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">4294967284</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+        </tr>
+        <tr>
+          <td width="72" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="21">
+            <p class="MsoNormal"><font size="2" color="#008080">&nbsp;<span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="17" valign="top" style="padding-left: 5.4pt; padding-rightding-bottom: 0cm" height="21">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">4</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="87" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="21">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">fffffff4</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+          <td width="108" valign="top" style="padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm" height="21">
+            <p class="MsoNormal" align="right" style="text-align:right"><font size="2" color="#008080"><span style="mso-bidi-font-size: 12.0pt; font-family: Courier New">fffffff4</span><span lang="EN-US" style="mso-bidi-font-size: 12.0pt; font-family: Courier New; mso-ansi-language: EN-US"><o:p>
+            </o:p>
+            </span></font></p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman">&nbsp;<o:p>
+&nbsp;    
+</font>
+</span></p>
+
+
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><b><font face="Times New Roman">
+Q: Which loop functions are available in Verilog? How to use them?</font></b><font face="Times New Roman">  
+</font>
+</span></p>
+
+<blockquote>
+  <p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman">
+  Repetition in Verilog can be implemented via <b><font color="#FF0000"> for</font></b> loop,  
+  <b><font color="#FF0000"> while</font></b> loop, and <b><font color="#FF0000"> repeat</font></b>  
+  statement.
+  </font>
+  </span></p>
+</blockquote>
+
+<table border="1" cellspacing="0" cellpadding="0" width="499" style="width:374.4pt;
+ margin-left:36.0pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
+  <tr>
+    <td width="499" valign="top" style="width:374.4pt;border:solid windowtext .5pt; padding:0cm 5.4pt 0cm 5.4pt">
+      <p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font color="#0000FF"><font face="Arial" size="2">
+      for(i=0; i &lt; 10; i = i+1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // No ++ or -- in Verilog<br>    
+      <span style="mso-tab-count: 1">&nbsp;&nbsp; </span>begin<br>
+      <span style="mso-tab-count: 1">&nbsp;&nbsp; </span>$display(&quot;i = %0d&quot;, i);<br>    
+      end
+      </font>
+      </font>
+      </span></td>
+  </tr>
+</table>
+
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman">
+</font>
+</span></p>
+
+<table border="1" cellspacing="0" cellpadding="0" width="499" style="width:374.4pt;
+ margin-left:36.0pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
+  <tr>
+    <td width="499" valign="top" style="width:374.4pt;border:solid windowtext .5pt; padding:0cm 5.4pt 0cm 5.4pt">
+      <p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font color="#0000FF"><font face="Arial" size="2">
+      i = 0;<br>    
+      while(i &lt; 0)<br>    
+      &nbsp;&nbsp; begin<br> 
+      <span style="mso-tab-count: 1">&nbsp;&nbsp; </span>$display(&quot;i = %0d&quot;,  
+      i);<br>  
+      <span style="mso-tab-count: 1">&nbsp;&nbsp; </span>i = i + 1;<br>    
+      end
+      </font></font></span></td>
+  </tr>
+</table>
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman">
+</font>
+</span></p>
+<table border="1" cellspacing="0" cellpadding="0" width="499" style="width:374.4pt;
+ margin-left:36.0pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
+  <tr>
+    <td width="499" valign="top" style="width:374.4pt;border:solid windowtext .5pt; padding:0cm 5.4pt 0cm 5.4pt">
+      <p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font color="#0000FF"><font face="Arial" size="2">
+      i = 0;<br>    
+      repeat(10)<br>
+      &nbsp;&nbsp; begin<br> 
+      <span style="mso-tab-count: 1">&nbsp;&nbsp; </span>$display(&quot;i = %0d&quot;,  
+      i);<br>  
+      <span style="mso-tab-count: 1">&nbsp;&nbsp; </span>i = i + 1;<br>    
+      end
+      </font></font></span></td>
+  </tr>
+</table>
+
+<blockquote>
+  <p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman">&nbsp;  
+  The above three examples all produce the same result.  
+  &nbsp; 
+  </font>
+  </span></p>
+</blockquote>
+
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman">&nbsp;
+</font>
+</span></p>
+
+
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman"><b>
+Q: </b></font></span><font face="Times New Roman"><b>Is it possible to specify  
+tasks in one module and then invoke it from other modules?</b></font></p>
+
+
+<blockquote>
+  <p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman"><span style="mso-ansi-language: EN-US">Just 
+  like the Procedure and Sub-routine in the other programming language, in 
+  Verilog, m</span></font></span><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman"><span style="mso-ansi-language: EN-US">any 
+  lines of code can be grouped together and called anywhere from within that 
+  module. This is called &quot;task&quot; in Verilog. Tasks are local to 
+  modules. It must be declared outside any begin..end statements of the module, 
+  but within the module declarations. Task must be defined in the module in 
+  which they are used. It is possible to define task in a separate file - only 
+  if you do not put it in another module!</span></font>
+  </span></p>
+</blockquote>
+
+<table border="1" cellspacing="0" cellpadding="0" width="499" style="width:374.4pt;
+ margin-left:36.0pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
+  <tr>
+    <td width="499" valign="top" style="width:374.4pt;border:solid windowtext .5pt; padding:0cm 5.4pt 0cm 5.4pt">
+      <p class="MsoNormal"><font color="#0000FF"><span style="mso-ansi-language: EN-US"><font face="Arial" size="2">// 
+      file name: a_task.v</font></span><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Arial" size="2">
+      <br>  
+      <span style="mso-ansi-language: EN-US">task add;</span> 
+      <br>  
+      <br>  
+      &nbsp;&nbsp; input [7:0] a;<br>    
+      &nbsp;&nbsp; output [7:0] b;<br>  
+      <br>
+      &nbsp;&nbsp; begin<br>   
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b = a + 100;<br>    
+      &nbsp;&nbsp; end<br>   
+      <br>  
+      endtask  
+      </font></span></font></td>
+  </tr>
+</table>
+
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman">
+</font>
+</span></p>
+
+<table border="1" cellspacing="0" cellpadding="0" width="499" style="width:374.4pt;
+ margin-left:36.0pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
+  <tr>
+    <td width="499" valign="top" style="width:374.4pt;border:solid windowtext .5pt; padding:0cm 5.4pt 0cm 5.4pt">
+      <p class="MsoNormal"><font color="#0000FF"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Arial" size="2">module add_100  
+      (temp_a, temp_b);<br>   
+      <br>  
+      &nbsp;&nbsp; input [7:0] temp_a;<br>   
+      &nbsp;&nbsp; output [7:0] temp_b;<br>    
+      &nbsp;&nbsp; reg [7:0] temp_b;<br>    
+      &nbsp;&nbsp; `include "a_task.v"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //<br> 
+      <br>
+      &nbsp;&nbsp; always @ (temp_a)<br>   
+      <span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>add (temp_a,  
+      temp_b);<br>  
+      <br>  
+      </font><span style="mso-ansi-language: EN-US"><font face="Arial" size="2">endmodule</font></span></span></font></td>
+  </tr>
+</table>
+
+
+<p class="MsoNormal">&nbsp;</p>
+
+
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><b><font face="Times New Roman">
+Q: How to call a task inside a task?</font></b><font face="Times New Roman"> 
+</font>
+</span></p>
+
+<blockquote>
+  <p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman">&nbsp; 
+   If you want to call a task inside a task, the declarations can be anywhere except being nested within a procedural block. 
+  &nbsp; 
+  </font>
+  </span></p>
+</blockquote>
+
+<table border="1" cellspacing="0" cellpadding="0" width="499" style="width:374.4pt;
+ margin-left:36.0pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
+  <tr>
+    <td width="499" valign="top" style="width:374.4pt;border:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+      <p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font color="#0000FF"><font face="Arial" size="2">
+      module nested;<br>  
+      <br> 
+      &nbsp;&nbsp; task foo;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      //declare foo<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $display(&quot;foo&quot;);<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end<br>
+      &nbsp;&nbsp; endtask<br><br>
+      &nbsp;&nbsp; task bar;<br> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $display(&quot;bar&quot;);<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; foo;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      //call task foo from within another task<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end<br>
+      &nbsp;&nbsp; endtask<br><br>
+      &nbsp;&nbsp; initial<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bar;<br>
+      <br>
+      endmodule
+      </font>
+      </font>
+      </span></td>
+  </tr>
+</table>
+
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><b><font face="Times New Roman">
+Q: <a href="glue.html">How to write Verilog "glue" logic?</a></font></b><font face="Times New Roman"> 
+</font>
+</span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><b><font face="Times New Roman">
+Q: <a href="random.html">How to generate random numbers in Verilog?</a></font></b><font face="Times New Roman"> 
+</font>
+</span></p>
+
+
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Times New Roman">&nbsp;
+</font>
+</span></p>
+</body>
+</html>

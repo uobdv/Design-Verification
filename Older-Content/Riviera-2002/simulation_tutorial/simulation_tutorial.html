@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-gb" xml:lang="en-gb">
+<head>
+<!--nomodify-->
+<meta name="style" content="cs" />
+<title>No Title</title>
+</head>
+<body>
+<!--MkFrame-->
+ <a NAME="tex2html1" HREF="node1.html"><img WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://www.cs.bris.ac.uk/latex2html/next_motif.gif"></a> <img WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://www.cs.bris.ac.uk/latex2html/up_motif_gr.gif"> <img WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://www.cs.bris.ac.uk/latex2html/previous_motif_gr.gif">   <br>
+<b> Next:</b> <a NAME="tex2html2" HREF="node1.html">  About this document </a>
+<br> <p>
+<p>
+<b>COMS40115 Exercise 2: Using the Riviera Simulator (Week 2)</b>
+<p>
+<blockquote> This exercise introduces you to the Riviera simulator. It gives you the
+  opportunity to investigate some of the functionality of Riviera on two
+  example designs - Riviera will be used to debug a calculator design for the
+  first COMS40115 assignment, so it is worth you investing some time into
+  getting to know your debugging tool better.
+<p>
+  All files referred to in this exercise are available on the COMS40115 web
+  site. This sheet should be sufficient to guide you through
+  the exercise. If there are problems, please let me know. Have fun! <br> 
+  Kerstin
+</blockquote>
+<p>
+<p>
+<b>Getting Started</b>
+<p>
+<p>
+<ol><li> Create a directory in your home directory for this exercise, 
+and move into it:
+<p>
+<code>mkdir DV_Ex1</code><br> 
+<code>cd DV_Ex1</code>
+<p>
+Create two further directories, one for the library files we create today,
+and one for wave forms.
+<p>
+<code>mkdir lib</code><br> 
+<code>mkdir wav</code>
+<p>
+Create one further directory for the source files we use today, and move
+into it.
+<p>
+<code>mkdir src</code><br> 
+<code>cd src</code>
+<p>
+Now copy all (Verilog source) files mux421*.v from the COMS40115 web site 
+into the current directory.<li> Starting Riviera:
+<p>
+Make sure you include <tt>/usr/local/vsimsa/</tt> into your PATH (variable). 
+For instance, if you use the bash shell, it is best to do this in your .bashrc
+file.
+<p>
+<code>export PATH=/usr/local/vsimsa/:$PATH</code>
+<p>
+Now start Riviera
+<p>
+<code>rungui &amp;</code>
+<p>
+You should see one window entitled &quot;Riviera-...&quot;.
+</ol>
+<p>
+<p>
+<b>Simulating Verilog Designs</b>
+<p>
+<p>
+<ol><li> The files <code>mux421_structural.v</code>, <code>mux421_dataflow.v</code>,
+  <code>mux421_behavioural.v</code> contain the design of a 4-to-1 multiplexer coded
+  in different styles. Familiarise yourself with the coding style used in each
+  design.
+<p>
+  The file <code>mux421_gen.v</code> contains Verilog code that generates 6 binary
+  output signals which will be used as stimulus (input data) for our
+  multiplexer designs.
+<p>
+  The file <code>mux421_check.v</code> contains Verilog code that checks signals. The
+  task <code>$monitor</code> continuously monitors the values of the variables or
+  signals specified in the parameter list and displays all parameters in the
+  list whenever the values of any one variable or signal changes.
+  <code>$monitor</code> only needs to be invoked once. Only one monitor list can be
+  active at a time. If there is more than one <code>$monitor</code> statement in your
+  simulation, the last <code>$monitor</code> statement will be the active statement,
+  the earlier ones will be overridden.
+<p>
+  Monitoring is turned on by default at the beginning of the simulation and can
+  be controlled during the simulation with the <code>$monitoron</code> and
+  <code>$monitoroff</code> tasks.
+<p>
+  Usage <code>$monitor</code> (<i>p</i>1,<i>p</i>2,<i>p</i>3,...,<i>pn</i>)<code>;</code>
+<p>
+  The parameters <i>p</i>1,<i>p</i>2,<i>p</i>3,...,<i>pn</i> can be variables, signal names, or quoted
+  strings. NOTE: All Verilog systems tasks appear in the form
+  <code>$&lt;keyword&gt;</code>.  You can find out more about Verilog system tasks such as
+  <code>$display</code> and <code>$time</code> in the Verilog reference guide in your
+  Evita_Verilog tutorial.
+<p>
+  The file <code>mux421_example_testbench.v</code> contains an example testbench for
+  the structural description of the 4-to-1 multiplexer design. Familiarise
+  yourself with the testbench code.<li> To simulate a design, the Verilog files need to be compiled first. To do
+  this, a design library has to be created and mapped by the user manually.
+<p>
+  In Riviera, choose the Create command from the Library menu. The Create
+  Library window will be displayed. This window can be used to create a library
+  and map a logical library name to a physical library file, create a library
+  only (without mapping), or map a logical library name to an existing library
+  file.
+<p>
+  Select the Library &amp; Mapping radio button.  Click the Browse button, select
+  the directory lib, call your library <code>mux421_example_testbench.lib</code>,
+  press OK, press OK again in the Create Library window.
+<p>
+  Note that the Library Name field specifies the logical name of the
+  <code>mux421_example_testbench.lib</code> library. Observe that the current work
+  library is now <code>mux421_example_testbench</code> which is displayed in the
+  library combo box in the main toolbar.<li> After the working library has been prepared, the design files can be
+  compiled.  Choose the Compile command from the Compilation menu. The Compile
+  Files window appears showing the current directory and available source
+  files. Select the <code>src</code> directory. The top-level file for compilation is
+  the testbench file <code>mux421_example_testbench.v</code> - select and compile it.<li> After the compilation of source files has been successfully completed,
+  you need to specify the design top-level unit and initialise simulation. From
+  the Riviera main menu choose Simulation and choose the Initialise Simulation
+  command. You should see four modules (unit names). The one with the red T
+  index <code>mux421_structural_testbench</code> is marked as a top-level module.
+  Highlight the <code>mux421_structural_testbench</code> top module and press the OK
+  button to initialise simulation. The Initialise Simulation dialog will close
+  and information on the initialisation phase will be printed to the Console
+  window.  Review the messages printed to the Console. Pay attention to
+  messages about memory allocation, used libraries, simulation resolution, etc.<li> After the simulation has been initialised, you can display the elaborated
+  structure of the project. To view such a structure, open the Structure
+  Browser window. The Design Structure Browser window and other debugging tools
+  are available from the View menu. The panes in the Structure Browser can be
+  tiled either horizontally or vertically - use the View option to change the
+  panes to tile vertically.
+<p>
+  Select the root of the design in the left pane of the Structure Browser.  The
+  set of objects visible in the right pane is automatically adjusted to the
+  selection in the left pane. Compare the visible objects with the wire
+  declaration in the module <code>mux421_structural_testbench</code> contained in the
+  file <code>mux421_example_testbench.v</code> - all wires should be observable.<li> Select (click on) and then right click on one of the signals, choose Add
+  to Waveform. This should open the Waveform Viewer window. Add all signals to
+  the waveform viewer.<li> After the desired signals have been specified and added to the waveform
+  window, the simulation can be run. To run all test vectors during one
+  simulation step you should use the Run command from the Simulation menu.
+<p>
+  Observe the messages printed to the Console. Also, observe the waveform
+  changes - you might need to click the &quot;Zoom to Fit&quot; button from the Waveform
+  Viewer toolbar.
+<p>
+  To save the waveform select Save as from the File menu. Select the <code>wav</code>
+  directory and give your waveform file a suitable name.<li> To run the simulation again, first restart it by selecting Restart
+  Simulation from the Simulation menu. Observe that all signals are now set to
+  x in the Waveform Viewer window.
+</ol>
+<p>
+<p>
+<b>Experimenting with Testbenches</b>
+<p>
+<p>
+Write your own testbenches to verify the behaviour of the dataflow and
+behavioural versions of the 4-to-1 multiplexer. For each design, save the
+waveforms in suitably named files. Use the Compare Waveforms option from the
+Waveform Viewer window to compare the waveforms you've created - when comparing
+waveforms, make sure corresponding signals have the same names. If you use the
+same input stimulus, are the three designs producing the same output? The
+comparison results are printed to the Console window of Riviera, if differences
+are detected, the Waveform Viewer window highlights the differences - this will
+become clearer when you simulate the faulty designs of the next section.
+<p>
+<p>
+<b>Debugging a faulty Multiplexer</b>
+<p>
+<p>
+The three files <code>mux421_*_faulty.v</code> contain faulty 4-to-1 multiplexer
+designs.  For each design, build a testbench, simulate it, collect a waveform
+and compare it to the waveform of the non-faulty design. You might want to
+investigate the source code to see where the bug is - use <code>diff</code> to
+compare the source file to the corresponding non-faulty design source file if
+the bug is not immediately obvious.
+<p>
+<p>
+<b>A different Multiplexer</b>
+<p>
+<p>
+The file <code>mux_int.v</code> contains the design of a multiplexer that selects
+between two numeric inputs and also outputs a response indicating valid data.
+Which coding style has been used: structural, dataflow or behavioural?
+<p>
+The file <code>mux_int_test.v</code> contains a badly designed (i.e. not properly
+modularised) testbench for the <code>mux_int</code> module. Run the testbench, i.e.
+simulate it. Observe the waveforms - compare the waveforms to the code in
+<code>mux_int_test.v</code>. Familiarise yourself with the <code>always</code> statement
+and the <code>$display</code> task. In the Waveform Viewer window you can change the
+format of the signal values, e.g. to decimal by right-clicking on the signal
+and selecting the Properties option from the menu.
+<p>
+Redesign the testbench so that it contains one module that generates stimulus
+and one module that acts as a checker. Experiment with different stimulus data,
+run the simulation only for/until a set time, or introduce a bug into the
+multiplexer source code and try to identify it from the waveform or the
+testbench output.
+<p>
+<p>
+<b>More on Riviera</b>
+<p>
+<p>
+The Riviera Help Topics option in the Help menu of the Riviera window opens up
+the on-line help. You might want to work through the Tutorial section, using
+the files provided in <code>/usr/local/vsimsa/projects/verilog/</code>.
+<p>
+<br> <hr>
+<ul> 
+<li> <a NAME="tex2html3" HREF="node1.html#SECTION00010000000000000000">  About this document ... </a>
+</ul>
+<hr><a NAME="tex2html1" HREF="node1.html"><img WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://www.cs.bris.ac.uk/latex2html/next_motif.gif"></a> <img WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://www.cs.bris.ac.uk/latex2html/up_motif_gr.gif"> <img WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://www.cs.bris.ac.uk/latex2html/previous_motif_gr.gif">   <br>
+<b> Next:</b> <a NAME="tex2html2" HREF="node1.html">  About this document </a>
+<p><address>
+<i>Kerstin Eder <br>
+Thu Oct 17 17:07:23 BST 2002</i>
+</address>
+<!--MkFrame-->
+</body>
+</html>

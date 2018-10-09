@@ -1,0 +1,712 @@
+%%% Lecture slides for Design Verification 
+%%% Course code COMSM0115
+%%% Lecture Topic: High-level Verification with e
+%%%
+%%%
+%%% Kerstin Eder, Bristol University, November 2002.
+%%% First Given: November 2002
+%%% Last Edited: 06/11/2009
+%%% Last Spellchecked: 20/11/2002
+
+\documentclass[a4paper]{article}
+
+\usepackage{overheads}
+\usepackage{amssymb}
+\usepackage{latexsym}
+
+\newcommand{\bsp}{\ensuremath{\blacksquare}}
+\newcommand{\frag}{\ensuremath{\mbox{\Huge\bf ?}}}
+\newcommand{\aha}{\epsfig[.03\textwidth]{../../Figures/aha.eps}}
+\newcommand{\adv}{\epsfig[.035\textwidth]{../../Figures/advantage.eps}}
+\newcommand{\dis}{\epsfig[.035\textwidth]{../../Figures/disadvantage.eps}}
+\newlength{\myhalfwidth} \setlength{\myhalfwidth}{0.5\textwidth}
+
+\makespecial{PLUS}{\adv}
+\makespecial{LESS}{\dis}
+\makespecial{EQUAL}{\aha}
+\makespecial{SEMI}{\bsp}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 1
+\begin{slide}[p]{}
+{\huge\Yellow "Improving Shareholder Value by Separating Verification from Design"}
+ 
+{\large The semiconductor industry continues to strive to manage the ever increasing risk of leaving a corner case bug that becomes the next front page story for EETimes. With cost of failure fast becoming a common agenda point in many semiconductor board room meetings around the world, how can you deliver to the ever growing demands of increasing shareholder value?
+
+Managing scarce resources to deliver sustainable competitive advantage is the platform upon which most of today's strategic thinking is built. Yet in the complex world of semiconductor product design we continue to see the promotion of the ``jack of all trades'' designer in the false belief that it actually reduces costs.
+}
+{\Large\bf\Green Separating verification from design is a natural evolution}  {\large to the necessary specialization that has become functional verification today. Why do accounting regulations demand that you employ armies of auditors to review your end of year accounts? When, not so many years ago, you could get away with your own accountants completing this function. 
+}
+{\Large\Green Auditors are much the same as verification engineers.}  {\large They are approaching the problem from a completely different perspective. They do not come with the cognitive incompetence of} {\Large\Red ``I know that's right, because I produced it!''} {\large The global company graveyard is littered with the tomb-stones of many household names that have made this mistake, Enron included.
+
+In this presentation, Verisity will deliver a solution to provide unique value that can be generated when you separate the concerns of functional verification from design. Reducing the cost of failure risks and significantly improving the effectiveness of your scarce engineering resource by automating the process of verification itself.
+
+{\em Presenter at edaForum04, Dresden, Germany, December 9th/10th 2004:
+Coby Hanoch
+Senior Vice President of Sales 
+Verisity Design, Inc.}}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 2
+\begin{slide}{High-level Verification}
+
+{\bf\Green State-of-the-art Verification Methodology}
+Focus on {\bf\Magenta Automation} of the Verification Process
+; Tools: now from Cadence {\large (who bought Verisity in April 2005)}
+  Specman Elite (SN) and 
+  {\bf e} verification language 
+
+= {\Magenta Raise level of abstraction and enhance productivity.}
+
+For local configuration info see Exercise 4: {\em Intro to Specman Tutorial.}
+[Please work your way through the on-line Specman intro tutorial.]
+
+\Large{[Credits: The material for this lecture is adapted from Verisity training material.]}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 4
+\begin{slide}{SN Main Enabling Technologies}
+{\bf\Green Constraint-driven Test Generation}
+  Create lots of meaningful tests quickly. :)
+  Control over automatic test generation.
+  Capture constraints from spec and verification plan.
+\vspace*{5mm}{\bf\Green Data and Temporal Checking}
+  Self-checking modules ensure data correctness and temporal properties.
+  Checks are always active.  
+    Unless turned off by: \code{set check IGNORE} ;-)
+\vspace*{5mm}{\bf\Green Functional Coverage Collection/Analysis}
+  Automatic functional coverage collection.
+  Analyse progress against functional coverage metrics.
+    {\Magenta Promotes {\em coverage driven} verification methodology.}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 5
+\begin{slide}{SN Verification Automation}
+\hspace*{4cm}\epsfig[.7\textwidth]{../../Figures/sn.eps}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 6
+\begin{slide}{Complete SN Verification Process}
+\overlay{+-}{\hspace*{2cm}\epsfig[.9\textwidth]{../../Figures/sn_verification_process.eps}}\overlay{-+}{\hspace*{2cm}\epsfig[.9\textwidth]{../../Figures/sn_verification_process_cdg.eps}}
+
+= The key is in the {\Green Verification Plan!}
+\overlay{-+}{{\Magenta {\bf Coverage-driven} stimulus generation!}}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 7
+\begin{slide}{Basics of the e Language}
+{\bf\Yellow High-level language} for writing verification environments:
+  test benches
+  coverage collection
+  test generation and checking
+= {\em\Magenta An e component is a representation of the ``rest of the world'' as seen from an interface of the design under verification (DUV).}
+
+{\bf\Yellow e supports:}
+  modular {\Green aspect-oriented} design 
+  high-level data types
+  {\Green pseudo-random} {\Green constrained-based} data generation
+  events 
+  high-level checking
+  checking of basic {\Green timing properties}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 8
+\begin{slide}{Aspect-oriented Programming}
+{\bf\Yellow AOP is {\em next step up} from object-oriented programming.}
+  Testcases have specific purposes:
+  ; Does parity check on packets work?
+  ; Are timing properties of transmission protocol valid?
+  Both are different concerns: They are orthogonal!
+= {\Yellow Two {\bf aspects} of same application DUV.}
+
+{\bf\Green AOP provides mechanisms to separate these two concerns into separate aspects of the verification environment.}  
+  Well-defined techniques for adding declarations, inserting or replacing code from the outside of a class, without editing the original class.
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 9
+\begin{slide}{On-line Help}
+{\bf\Green All Specman and e language help is on-line:}
+  e language reference
+  Command reference for Specman Elite
+  User guide etc.
+
+For sn and e help use {\Green\code{sn_help.sh}} from command line.
+  Make sure you change to ``Tree View''!
+    Go to ``Edit'' menu. 
+    Select ``Settings''. 
+    Tick ``Show Tree View on startup''.
+
+For IUS/ncsim help use {\Green\code{cdnshelp}} from command line. 
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 10
+\begin{slide}{File Format}
+  An e code segment is enclosed with a {\bf\Yellow begin-code marker \code{<'}} and an {\bf\Yellow end-code marker \code{'>}.}
+
+  Both the begin-code marker and the end-code markers must be placed at the beginning of a line (left-most), with no other text on that same line.
+
+; e code segment:
+\code{<'
+import cpu_test_env;
+'>}
+
+  Several code segments can appear in one file, each segment consists of one or more statements.
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 11
+\begin{slide}{Comments}
+  {\Green e files begin with a comment!}
+  This comment ends when first begin-code marker \code{<'} is found.
+
+  Comments in code segments can be marked with \code{--} or \code{//}.
+
+= Use end-code \code{'>} and begin-code \code{<'} markers to write several consecutive lines of comment in the middle of code segments.
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 13
+\begin{slide}[p]{Syntactic Elements}
+{\bf\Yellow Statements} are top-level constructs.
+  Valid within \code{<'} and \code{'>} markers.
+  {\Red Statements always end with a \bf{semicolon ``;''}!}  
+\vspace*{5mm}{\bf\Yellow Struct members} are second-level constructs.
+  Valid only within a \code{struct} definition.
+= Associated with dynamic constructs of a testbench e.g. stimulus.
+  {\Large (There are also {\bf\Yellow Units} which are associated with testbench constructs such as drivers/checkers/scoreboards. }
+\vspace*{-5mm}\hspace*{1.5Em}{\Large They exist for the duration of the simulation.)}
+\vspace*{5mm}{\bf\Yellow Actions} are third-level constructs.
+  Valid only when associated with a struct member, such as a method or an event.
+\vspace*{5mm}{\bf\Yellow Expressions} are lower-level constructs.
+  Can be used only within another e construct.
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 14
+\begin{slide}{Statements}
+Key statement types:
+  \code{\Yellow struct}: Defines a new data structure.
+  (\code{\Yellow unit}: Defines a new unit.)
+  \code{\Yellow type}: Defines an enumerated type or subtype.
+  \code{\Yellow extend}: Extends a previously defined struct or type.
+  \code{\Yellow define}: Extends language. \bsp\ \code{define OFFSET 5;} 
+  \code{\Yellow import}
+  ... (more, see on line doc)
+
+= {\Green Imports must be first (after defines).}
+Otherwise, order is not critical. 
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 15
+\begin{slide}{Structs vs Units:}
+{\Green Structs are the most basic building blocks in e.}
+  Used to keep data and operations together. 
+  ; {\huge packets, instructions, frames}
+  Can be created at run-time, i.e. they are dynamic.
+    Data can be generated on-the-fly.
+{\bf\Yellow Units are a special kind of struct.}
+  Units are {\bf\Yellow static}! Can be generated during test phase only.
+  Allow mapping to HDL path. \hfill (Best way to connect to DUV.)
+  Used for generators/checkers/monitors, {\Green bus functional models (BFMs),} self-checking structures, overall testbench.
+    {\huge {\bf\Green BFMs} package all bus functional procedures of an interface, i.e. all transactions supported by the interface. The transactions are abstracted from a physical-level interface to a procedural interface. BFMs can be used to generate stimulus as well as to check the DUV response. }
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 16
+\begin{slide}{Struct and Struct Members}
+Members are 2nd-level constructs: Valid only within a struct definition.
+; A simple struct for packets to be used in comms protocol:
+{\huge\code{\Green type packet_kind: [atm, eth];
+\Green struct packet {
+\Green   len: int;
+\Green   keep len < 256; 
+\Green   kind: packet_kind;
+\Green };}}
+  \code{keep}: Specifies rules for constraints to influence data generation.
+; \vspace*{8mm}Another example struct for transactions:
+{\huge\code{\Green struct transaction {
+\Green   address: uint;
+\Green   data: list of uint;
+\Green   transform(multiple:uint) is empty;
+\Green };}}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 17
+\begin{slide}{Struct Members}
+{\bf\Yellow Field:} Defines data entry to be member of enclosing struct with explicit data type.
+{\bf\Yellow Method:} Defines operational procedure that can manipulate fields of enclosing struct and access run-time values in DUV.
+{\bf\Yellow Subtype declaration:} Defines instance of parent struct in which specific members have particular values or behaviour.  
+; Use \code{when} for conditional constraints on possible values of a field.
+{\bf\Yellow Constraint declaration:} Influences distribution of values generated for data entries and the order in which values are generated. \bsp\ \code{keep}
+{\bf\Yellow Coverage declaration:} Defines functional verification goals and collects data on how well the testbench is meeting these goals. 
+; \code{cover} event-type \code{is} {coverage-item-definition\code{;} ...}\code{;} 
+{\bf\Yellow Temporal declaration:} Defines e events and their associated actions. \bsp\ \code{event}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 18
+\begin{slide}[p]{}
+\vspace*{-5mm}{\huge\code{type PCICommandType: [ IO_READ=0x2, IO_WRITE=0x3,
+                       MEM_READ=0x6, MEM_WRITE=0x7 ];
+struct pci_transaction like transaction {
+    command : PCICommandType;
+\Green    keep soft data.size() in [0..7];
+    dual_address: bool;
+\Green    when dual_address pci_transaction {
+        address2: uint;
+    };
+    bus_id: uint;
+\Green    event initiate;
+\Green    on initiate {
+\Green        out("An event has been initiated on bus ", bus_id);
+\Green    };
+\Yellow    cover initiate is {
+\Yellow        item command;
+\Yellow    };
+    transform(multiple:uint) is only {
+        address = address * multiple;
+    };
+};}}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 19
+\begin{slide}{Predefined Structs}
+An e environment contains by default a number of predefined structs (and of course some user-defined ones).
+\hspace*{2cm}\epsfig[.9\textwidth]{../../Figures/predefined_e_structs.eps}
+
+= The system struct {\Green\code{sys}} is the root for user-defined structs.
+  Must instantiate {\bf user-defined structs} under \code{sys}.
+  Contents of \code{sys} can be viewed via SN GUI.
+  Similar to \code{main} in C. ;-)
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 20
+\begin{slide}{Instantiation under sys}
+= Every user-defined struct (including units) must be instantiated as a (sub)field of \code{sys}.
+
+{\huge\code{ struct packet {
+   address : uint (bits : 2);
+   payload : uint (bytes : 64);
+ };
+
+\Yellow unit router_bfm {
+\Yellow  packets : list of packet;
+\Yellow };
+
+\Green extend sys {
+\Green  router : router_bfm is instance;
+\Green };}}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 22
+\begin{slide}{Generation with SN}
+{\bf\Green Offline (prior to sim i.e. in Generate phase):}
+  Use {\bf\Yellow Generate} or {\bf\Yellow Test} command
+    Test calls Generate command!
+  Recursively generates {\em\Green everything} under \code{sys}.
+  BEWARE: Can consume a lot of memory!
+
+{\Green\bf Online (during sim):}
+  Use \code{gen} action. \bsp\ \code{gen} {\em gen-item} \code{[keeping {...}]}
+  Allows to dynamically generate values based on DUV state.
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 8
+\begin{slide}[p]{Using Constraints}
+{\Green\code{keep} {\em constraint-bool-expr}\code{;}} where {\em constraint-bool-expr} is a simple or compound Boolean expression.
+  States restriction on the values generated for fields in the struct.
+; \code{keep kind!=tx or len==16;}
+  Describes required relationships between field values and other struct items.
+; {\huge\code{struct packet {
+  kind : [tx, rx];
+  len : int;
+  keep kind == tx => len==16;
+--when tx packet { keep len == 16; }; exactly same effect
+};}}
+= \vspace*{5mm}{\Yellow Hard constraints are applied when the enclosing struct is generated.} If constraints can't be met, generator issues {\bf\Red constraint contradiction message.}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 10
+\begin{slide}{Generation with keep}
+Generation order is important: \aha\ It influences the distribution of values!
+; {\huge\code{struct packet {
+  kind : [tx, rx];
+  len : int;
+  keep len > 15 => kind==rx;
+};}}
+
+- If \code{kind} is generated first, \code{kind} is \code{tx} about half the time because there are only two legal values for kind.
+- If \code{len} is generated first, the distribution is different.
+; Consider using: {\Yellow \code{keep gen (kind) before (length);}}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 9
+\begin{slide}{Using Soft Constraints}
+{\Yellow Using \code{keep soft} (e.g. to set default values) and \code{select}:}
+; {\Large\code{struct transaction {
+  address : uint;
+  keep soft address == select {
+    10: [0..49];
+    60: 50;
+    30: [51..99];
+  };
+};}}
+\vspace*{5mm}NOTE: {\em Soft constraints} can be overridden by hard constraints!
+; {\Large\code{extend instruction {
+  keep soft op_code == select {
+    40: [ADD, ADDI, SUB, SUBI];
+    20: [XOR, XORI];
+    10: [JMP, CALL, RET, NOP];
+  };
+};}}
+= \vspace*{5mm}{\Green In practice, getting the weights/bias right (for coverage closure) requires significant engineering skill.}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 11
+\begin{slide}{Randomized Test Generation needs...}
+{\bf\Yellow ...repeatability:}
+\hspace*{1Em}Same testbench version + same test 
+\hspace*{1Em}{\Red + same random seed}
+\hspace*{1Em}{\Green = same stimulus data.}
+* \vspace*{5mm}{\bf Is this all? The testbench evolves over time!}
+\overlay{-++}{\vspace*{5mm}{\bf\Yellow and random stability:}
+= Changes to the testbench should not affect {\bf\Magenta orthogonal} aspects!}
+\overlay{-+-}{; Packet data structure:
+{\huge\code{\Green struct packet {
+\Green ... 
+\Green payload: list of byte;
+\Green ...};}}}\overlay{--+}{; Packet data structure with interrupted field:
+{\huge\code{\Green struct packet {
+\Green ... 
+\Green payload: list of byte;
+\Magenta interrupted: bool;
+\Green ...};}}
+= With same seed should give the same {\Green\code{payload}} data!}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 25
+\begin{slide}{Packing: Driving Stimulus into the DUV}
+\code{pack()} function: 
+  {\Yellow pack(option:pack option, item: exp, ...): list of bit}
+  Specman Elite system function.
+  Conversion from higher-level data structure to bit stream required by DUV.
+; \code{i_stream = pack(packing.high, opcode, op1, op2);}  
+
+{\bf\Yellow pack options are:} packing.high, packing.low or NULL
+  packing.high: 1st item at MSB
+  packing.low: 1st item at LSB
+  NULL: Use global default - set initially to packing.low. 
+
+{\bf\Yellow item:} A legal e expression that is a path to a scalar or a compound data item, such as a struct, field, list, or variable.
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 26
+\begin{slide}{Packing High}
+{\Yellow\bf packing.high: 1st item at MSB}
+\epsfig[.8\textwidth]{../../Figures/packing_high.eps}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 27
+\begin{slide}{Packing Low}
+{\bf\Yellow packing.low: 1st item at LSB}
+\epsfig[.8\textwidth]{../../Figures/packing_low.eps}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 23
+\begin{slide}[p]{Fields}
+{\Yellow Syntax: {\huge [!][\%] field-name[: type] [[min-val .. max-val]] [((bits $\mid$ bytes):num)]}} 
+\code{!} Denotes an {\em ungenerated\/} field.
+\code{%} Denotes a {\em physical\/} field.
+The type for the field can be any scalar type, string, struct, or list.
+(bits $\mid$ bytes: num) specifies width of field in bits or bytes. 
+\vspace*{5mm}{\Large\code{     type NetworkType: [IP=0x0800, ARP=0x8060] (bits: 16);
+            struct header {
+\Green                %address: uint (bits: 48);
+\Green                %length: uint [0 .. 32];
+            };
+            struct packet {
+                hdr_type: NetworkType;
+\Green                %hdr: header;
+                is_legal: bool;
+\Yellow                !counter: uint;
+            };}}
+= \vspace*{5mm}{\Magenta\bf Field order is important!} {\huge It is the packing order for physical fields.}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 24
+\begin{slide}{Ungenerated Fields}
+  Marked with \code{\Green !}.
+  Values for this field are {\bf\Red not generated automatically.}
+  {\bf\Yellow Useful for fields that:}
+    Are explicitly assigned values during verification.
+    Must contain values whose computation is too complicated to be expressed with constraints.
+  Ungenerated fields get {\bf\Yellow default initial value:} 0 for scalars, NULL for structs and empty list for lists.
+  Ungenerated fields whose value is from a range (e.g. [20..30]) get initialized to the first value in range.
+= If the field is a struct it won't be allocated and none of the fields in it will be generated.
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 28
+\begin{slide}{Physical Fields}
+  Marked with \code{\Yellow %}.
+  {\Red Physical fields are packed when the struct is packed.}
+  Used for fields that represent data that will be sent to HDL design in the simulator.
+  {\bf\Yellow Non-physical fields} are called {\bf\Yellow virtual fields}. 
+    They are not packed automatically when the struct is packed.
+    (They can be packed individually if needed.)
+  {\Yellow If no range is specified, width of field is determined by field's type.}
+  If the field's type does not have a known width, you must use (bits $\mid$ bytes: num) syntax to define the width. (Important for packing!)
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 29
+\begin{slide}{Limitations of e's AOP Implementation}
+  \vspace*{5mm}{\Yellow Many things can be extended!}
+    So more discipline and structure is required.
+  \vspace*{5mm}{\Yellow Fields can only be appended:}
+    Fields are physically appended to existing fields
+    Might create a problem when packing!
+  \vspace*{5mm}{\Yellow Variance control fields: Extensions can only be specified for a single value of the control field.}
+  ; instructions \code{add} and \code{sub} with feature that applies to both
+    Needs to be specified for both or use trick! {\large \aha See next slide!}
+  \vspace*{5mm}{\Yellow Methods can only be appended, prepended or replaced.}
+  \vspace*{5mm}{\Yellow Aspects are order-dependent (on loading).}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 30
+\begin{slide}[p]{}
+{\Yellow Extensions via {\em variance control fields} can only be specified {\bf for a single value of the control field!}}
+  To get around this, introduce an additional {\em virtual} field.
+  This field controls common extensions.
+; Extension to an instruction struct (for Calc\_1 design):
+{\large\code{      type opcode_t : [  NOP, ADD, SUB, INV, INV1, SHL, SHR ] (bits : 4);
+
+      struct instruction_s {
+
+         %cmd_in : opcode_t;
+         %din1   : uint (bits:32);
+         %din2   : uint (bits:32);
+
+         !resp   : uint (bits:2);
+         !dout   : uint (bits:32);
+
+         check_response(ins : instruction_s) is empty;
+
+      }; // struct instruction_s
+
+      extend instruction_s {
+
+\Green        is_a_shift : bool;
+\Green        keep is_a_shift == opcode in [SHL, SHR];
+
+\Yellow        when is_a_shift instruction_s {
+          // Common extension to SHL and SHR goes below.
+          ...
+        }
+      }}} 
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 12
+\begin{slide}{Advanced Techniques: SN temporal checking}
+
+{\bf\Yellow SN Temporal Language}
+  Capture behaviour over time for synchronization with DUV, functional coverage and {\bf\Yellow protocol checking.}
+
+  Language consists of:
+    temporal expressions (TEs) 
+    temporal operators
+    {\Yellow\code{event}} struct members to define occurrences of events during sim run
+    {\Yellow\code{expect}} struct members for checking temporal behaviour
+\vspace*{5mm}{\Green NEW: PSL/Sugar compatible expressions (more later).}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 13
+\begin{slide}{Temporal Expressions in e}
+  Each TE is associated with a {\bf\Yellow sampling event.}
+  Sampling event indicates when the TE should be evaluated by SN.
+
+{\bf\Yellow Syntax examples:}
+; true(boolean-exp)@sample-event
+; rise/fall/change(expression)@sample-event
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 16
+\begin{slide}{SN Predefined Event: @sim}
+
+; \code{event clk is rise (clk_p$)\Yellow @sim;}
+
+\code{@sim} is {\bf\Yellow special sampling event} occurring at any simulator callback. 
+  Expression must be an HDL signal path in the simulated model.
+
+= Signal does not have to be a clock.
+  No restriction for signal to be periodic or synchronous.
+< {\Magenta Might slow down simulation!}
+
+= Clock signal can also be emitted from e code and driven into DUV. (But usually more efficient to generate clock in HDL.)
+
+When not running with a simulator attached to SN, use \code{\Yellow @sys.any}.
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 14
+\begin{slide}[p]{Events in SN}
+  Events are used to {\bf\Yellow synchronize with the DUV} or to debug a test.
+  {\bf\Yellow Events are struct members.}
+; \vspace*{5mm}{\bf\Green Automatic emission} of events:
+{\huge\code{  <'
+    extend driver_s {
+\Green       event clk is fall(clk_p$)\Yellow @sim;
+\Green       event resp is change(out_resp1_p$)@clk;
+    };
+  '>}}
+; {\bf\Magenta Explicit emission} of event:
+{\huge\code{  <'
+    extend driver_s {
+       collect_response(cmd : command_s) @clk is also {
+\Magenta          emit cmd.cmd_complete;
+       };
+    };
+  '>}}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 17
+\begin{slide}[p]{Conforming to Stimulus Protocol}
+{\bf\Magenta Must be able to react to state of DUV during simulation!}
+; clock, signal changes, sequences of events
+\begin{tabular}[b]{@{}c@{}}
+\begin{minipage}{\myhalfwidth}\raggedright
+e language provides {\Yellow\code{wait}} (till next cycle) and {\Green \code{sync}} actions which allow to pause procedural code until event occurs.
+
+
+{\huge\code{ print a;
+\Yellow wait true(enable_p$==1)@clk;
+ print b;}}
+
+{\huge\code{ print a;
+\Green sync true(enable_p$==1)@clk;
+ print b;}}
+\end{minipage}
+\end{tabular}\hfill\begin{tabular}[b]{@{}c@{}}
+\begin{minipage}{.9\myhalfwidth}\raggedright
+\vspace{-5mm}\hspace*{-6mm}\epsfig[1.1\textwidth]{../../Figures/wait_sync.eps}
+\end{minipage}
+\end{tabular}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 18
+\begin{slide}{Methods with a Notion of Time}
+TCMs - Time Consuming Methods
+  Depend on sampling event.
+  Can be executed over several simulation cycles.
+; {\huge\code{\Green   collect_response(cmd : command_s) @clk is {
+\Green      wait @resp; -- wait for the response
+\Green      cmd.resp = out_resp1_p$;
+\Green      cmd.dout = out_data1_p$;
+\Green   }; // collect_response}}
+  Implicit \code{sync} action at beginning of TCM.
+  TCM must be called or started to execute.
+; {\huge\code{\Green   run() is also {
+\Green      start drive();        // spawn
+\Green   }; // run}}
+* Non-TCMs can't {\em\Red call} TCMs because they have no notion of time.
+  TCMs can (only) be {\em\Yellow started} (using \code{start}) from a non-TCM!
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 15
+\begin{slide}{Synch between SN and Simulator}
+\epsfig[0.9\textwidth]{../../Figures/sn_sim.eps}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 20
+\begin{slide}{Temporal Checking Methodology}
+- {\Yellow Capture important DUV temporal behaviour} with events and TEs.
+- Use {\Yellow\code{expect}} struct members to declare temporal checks.
+
+{\Red Syntax: \code{expect} TE \code{else dut_error(}{\em string}\code{);}}
+
+{\bf\Yellow Example temporal checks:}
+{\huge{\Green\code{expect @req => {[..4];@ack} @clk}}
+\code{else dut_error("Acknowledge did not follow}
+\code{                request within 1 to 5 clock cycles.");}}
+
+{\huge{\Green\code{expect @buffer_full => \Magenta eventually \Green @int @clk}} 
+\code{else dut_error("Buffer full, but interrupt did not occur.");}}
+
+* {\Magenta\code{eventually}} Sometime {\em before the end of simulation!}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 31
+\begin{slide}{Specman Elite Tutorial}
+{\bf\Green DUV:} simple CPU (ALU, 4 regs, PC, PC\_Stack, fetch/exec FSM)
+  {\bf Interface:} clock, reset, instruction [8 bit]
+{\bf\Yellow Learn how to:}
+  Design the verification environment
+  Define DUV interfaces
+  Generate a simple test
+  Drive and check the DUV
+  Generate constraint-driven tests
+  Define and analyse test coverage
+  Create corner case tests
+  Create temporal and data checks
+  Analyse and bypass bugs
+{\em\Yellow About 100 pages. A really easy ``learn by doing'' lab. Takes about 2h. :)}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Slide 32
+\begin{slide}{We have now covered}
+  Basics of e language.
+  Please do Specman Elite Tutorial with CPU DUV.
+
+{\bf Next:} 
+  {\Red Assignment 2 - Intro to .e code and verification method.}
+  Hands-on session with demo.
+\end{slide}
+
+\end{document}
+%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
+

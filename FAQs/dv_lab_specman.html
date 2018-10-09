@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-gb" xml:lang="en-gb">
+<head>
+<!--nomodify-->
+<meta name="style" content="cs" />
+<title>No Title</title>
+</head>
+<body>
+<h2><b><font face="Arial">COMS31700 - Design Verification Lab Q & A: Writing Testbench with Specman</font></b></h2> 
+
+
+
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language: EN-US"><font face="Times New Roman"><b>Q: 
+How to colorize Specman keywords in an editor?</b></font></span></p>
+<blockquote>
+  <p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language: EN-US"><font face="Times New Roman">Emacs 
+  users please see: <a href="http://www.specman-mode.com/specman-mode.html">
+  http://www.specman-mode.com/specman-mode.html</a></font></span></p>
+</blockquote>
+
+<p class="MsoNormal"><span lang="EN-US"><font face="Times New Roman"><b><span style="mso-ansi-language: EN-US">Q: 
+How can I configure Specman so that a random seed is used for test data generation?</span></b></font></span></p>
+<blockquote>
+   <p class="MsoNormal"> <span style="mso-ansi-language: EN-US"><font face="Times New Roman"><span lang="EN-US">
+   Extend the <font color="#FF0000">setup()</font> method in calc1_sn_env.e to include the line: 
+   <font color="#FF0000">set_config(gen, seed, random);</font></span></font></span></p>
+</blockquote>
+
+
+<p class="MsoNormal"><span lang="EN-US"><font face="Times New Roman"><b><span style="mso-ansi-language: EN-US">Q: 
+Which loop functions are available in e language? How to use them?</span></b></font></span></p>
+<blockquote>
+   <p class="MsoNormal"> <span lang="EN-US" style="mso-ansi-language: EN-US"><font face="Times New Roman"><span style="mso-ansi-language: EN-US"><b>while</b> 
+   <i>bool-exp</i> [<b>do</b>] {<i>action</i>;?}</span></font></span></p>
+   <table border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; border-style: none; border-width: medium" width="413">
+    <tr>
+      <td width="397" valign="top" style="border: .5pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF"><b>while</b> 
+        a &lt; b { <o:p>
+        </o:p>
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF"><span style="mso-spacerun: yes">&nbsp;&nbsp; 
+        </span>a += 1;<o:p> 
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">};</font></span><span style="font-size:11.0pt;
+  mso-bidi-font-size:12.0pt;font-family:&quot;Courier New&quot;"><o:p>
+        </o:p>
+        </span></p>
+      </td>
+    </tr>
+   </table>
+   <p class="MsoNormal"> <span lang="EN-US" style="mso-ansi-language: EN-US"><font face="Times New Roman"><span style="mso-ansi-language: EN-US"><b>repeat</b> 
+   {<i>action</i>;?} <b>until</b> <i>bool-exp</i></span></font></span></p>
+   <table border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; border-style: none; border-width: medium" width="414">
+    <tr>
+      <td width="398" valign="top" style="border: .5pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF"><b>repeat</b> 
+        {<o:p>
+        </o:p>
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;  
+        i += 1;<o:p> 
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt;
+  font-family:&quot;Courier New&quot;"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">} 
+        <b>until</b> i == 3;</font></span><o:p>
+        </o:p>
+        </span></p>
+      </td>
+    </tr>
+   </table>
+   <p class="MsoNormal"> <b><span lang="EN-US" style="mso-ansi-language: EN-US"><font face="Times New Roman"><span style="mso-ansi-language: EN-US">f</span></font></span></b><span lang="EN-US" style="mso-ansi-language: EN-US"><font face="Times New Roman"><span style="mso-ansi-language: EN-US"><b>or 
+   each</b> [<i>type</i>] [(<i>item-name</i>)] [using index (<i>index-name</i>)] 
+   <b>in</b> [reverse] <i>list-exp</i> [<b>do</b>] {<i>action</i>;?}</span></font></span></p>
+   <table border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; border-style: none; border-width: medium" width="414">
+    <tr>
+      <td width="398" valign="top" style="border: .5pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">type 
+        book_type: [AA, BB];<o:p>
+        </o:p>
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">struct 
+        book{<o:p>
+        </o:p>
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;  
+        kind : book_type;<o:p> 
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;  
+        when AA book {<o:p> 
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+        act() is {<o:p> 
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+        outf(&quot;AA: &quot;);<o:p> 
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+        };<o:p>
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;  
+        };<o:p>
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;  
+        when BB book {<o:p> 
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+        act() is {<o:p> 
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+        outf(&quot;BB: &quot;);<o:p> 
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+        };<o:p>
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;  
+        };<o:p>
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">};<o:p>
+        </o:p>
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">extend 
+        sys {<o:p>
+        </o:p>
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;  
+        book_list[20] : list of book;<o:p> 
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;  
+        run is also {<o:p> 
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+        <b>for each</b> AA book (n) <b>in</b> book_list {<o:p> 
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+        out(index);<o:p>
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+        n.act();<o:p>
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+        }<o:p>
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+        <b>for each</b> BB book (n) <b>in</b> book_list <b>do</b> {<o:p> 
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+        out(index);<o:p>
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+        n.act();<o:p>
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt;
+  font-family:&quot;Courier New&quot;"><font color="#0000FF"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span>}<o:p>
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt;
+  font-family:&quot;Courier New&quot;"><font color="#0000FF">};</font><o:p>
+        </o:p>
+        </span></p>
+      </td>
+    </tr>
+   </table>
+   <p class="MsoNormal"> <span lang="EN-US" style="mso-ansi-language: EN-US"><font face="Times New Roman"><span style="mso-ansi-language: EN-US"><b>for</b> 
+   <i>var-name</i> <b>from</b> <i>from-exp</i> [down] <b>to</b> <i>to-exp</i> 
+   [step <i>step-exp</i>] [<b>do</b>] {<i>action</i>;?}</span></font></span></p>
+   <table border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; border-style: none; border-width: medium" width="413">
+    <tr>
+      <td width="397" valign="top" style="border: .5pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF"><b>for</b><span style="font-size:11.0pt;
+  mso-bidi-font-size:12.0pt;font-family:&quot;Courier New&quot;"> i <b>from</b> 
+        40 down <b>to</b> 0 step 2 <b>do</b> {<o:p>
+        </o:p>
+        </span></font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt;
+  font-family:&quot;Courier New&quot;"><font color="#0000FF"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New">&nbsp;&nbsp; 
+        </span>out(i);<o:p>
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt;
+  font-family:&quot;Courier New&quot;"><font color="#0000FF">};</font><o:p>
+        </o:p>
+        </span></p>
+      </td>
+    </tr>
+   </table>
+   <p class="MsoNormal"> <span lang="EN-US" style="mso-ansi-language: EN-US"><font face="Times New Roman"><span style="mso-ansi-language: EN-US"><b>for</b> 
+   {<i>initial-action</i>; <i>bool-exp</i>; <i>step-action</i>} [<b>do</b>] {<i>action</i>;?}</span></font></span></p>
+   <table border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; border-style: none; border-width: medium" width="412">
+    <tr>
+      <td width="396" valign="top" style="border: .5pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New"><font color="#0000FF"><b>for</b><span style="font-size:11.0pt;
+  mso-bidi-font-size:12.0pt;font-family:&quot;Courier New&quot;"> </font><font color="#FF0000"><b>{</b></font><font color="#0000FF">{i=40; 
+        j=0}; i&gt;=0; {i-=2; j+=1}</font><font color="#FF0000"><b>}</b></font><font color="#0000FF"> 
+        <b>do</b> {<o:p>
+        </o:p>
+        </font></span></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt;
+  font-family:&quot;Courier New&quot;"><font color="#0000FF"><span style="font-size: 11.0pt; mso-bidi-font-size: 12.0pt; font-family: Courier New">&nbsp;&nbsp; 
+        </span>outf(&quot;%b : %d&quot;,i,j);<o:p> 
+        </o:p> 
+        </font></span></p>
+        <p class="MsoNormal" style="word-spacing: 0; text-indent: 0; line-height: 100%; margin: 0"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt;
+  font-family:&quot;Courier New&quot;"><font color="#0000FF">};</font><o:p>
+        </o:p>
+        </span></p>
+      </td>
+    </tr>
+   </table>
+   <p class="MsoNormal"> <font face="Times New Roman"><span style="mso-ansi-language: EN-US" lang="EN-US">*  
+   <u><i>Please refer to the <b>e language reference</b> guide for more  
+   details.</i></u></span></font></p>
+</blockquote>
+</body>
+</html>

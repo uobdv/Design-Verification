@@ -1,0 +1,28 @@
+* Title: Specman Elite Tutorial
+* Name:  cpu
+* Version: 12.1
+* Modified: March, 2013
+* Category: Tutorial 
+* Documentation: docs/sn_cpu_tutorial.pdf
+* Description:
+
+The goal of this tutorial is to give you first-hand 
+experience in how the Specman Elite system effectively 
+addresses functional verification challenges.
+
+This tutorial uses the Specman Elite system to create a 
+verification environment for a simple CPU design.
+
+* Directory structure:
+
+This package contains the following directories:
+ 
+  e/         - all e sources
+  
+       /gold - subdirectory for original code with the solutions 
+  
+       /src  - subdirectory for initial code to work on throughout 
+	        the tutorial	
+  
+  docs/      - all documents
+
