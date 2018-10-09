@@ -1,5 +1,5 @@
 ---
-title: COMS31700: Design Verification (UoB)
+title: "COMS31700: Design Verification (UoB)"
 ---
 
 ## Welcome to Design Verification
