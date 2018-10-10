@@ -60,6 +60,25 @@ This unit familiarises students with the state of the art in Design Verification
 
 [Download weeks 1 to 13 course content (ZIP archive)](/Lectures/Current.zip)
 
+### Labs & Drop-ins
+
+#### Lab 1
+
+This session covers setting up access to the software.
+
+We recommend you use the lab machines for reliable access. Remote accesss is also available via NoMachine/Frosty.
+
+Video: [https://youtu.be/NQGvJ47RsSM](https://youtu.be/NQGvJ47RsSM)
+
+[Lab sheet here.](Labs/Week 1.pdf)
+
+#### Additional drop-in sessions : Tuesday 16th October 2018
+
+In Kerstin's absence, additional informal drop-in sessions will be held during the usual lecture slots (in the lecture rooms) on Tuesday 16th October 2018. In particular these are to assist Robotics students who will be missing the first lab on Wednesday 10th October.
+
+Please let Ed know (via the Blackboard forum or email) any specific technical issues in advance of these sessions (if you can) so he can prepare fixes. Thanks!
+
+
 ### Online resources
 
 The [Verification Academy](http://www.verificationacademy.com/) provides a comprehensive learning resource from basics to very advanced materials.
