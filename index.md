@@ -1,5 +1,7 @@
 ---
+layout: default
 title: "COMS31700: Design Verification (UoB)"
+description: Design Verification module (COMS31700) at the University of Bristol
 ---
 
 ## Welcome to Design Verification
