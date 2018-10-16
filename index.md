@@ -74,6 +74,10 @@ Video: [https://youtu.be/NQGvJ47RsSM](https://youtu.be/NQGvJ47RsSM)
 
 [Lab sheet here.](Labs/Week 1.pdf)
 
+#### [Lab 2](Labs/Week-2)
+
+[See this page](Labs/Week-2)
+
 #### Additional drop-in sessions : Tuesday 16th October 2018
 
 In Kerstin's absence, additional informal drop-in sessions will be held during the usual lecture slots (in the lecture rooms) on Tuesday 16th October 2018. In particular these are to assist Robotics students who will be missing the first lab on Wednesday 10th October.
