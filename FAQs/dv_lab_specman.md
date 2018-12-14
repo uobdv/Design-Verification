@@ -6,7 +6,7 @@ title: Writing testbenches with Specman
 
 ### Q: How to colorize Specman keywords in an editor?
 
-Emacs users please see: [http://www.specman-mode.com/specman-mode.html](http://www.specman-mode.com/specman-mode.html)
+Emacs users please see: [https://github.com/hackonteur/specman-mode](https://github.com/hackonteur/specman-mode)
 
 ### Q: How can I configure Specman so that a random seed is used for test data generation?
 
