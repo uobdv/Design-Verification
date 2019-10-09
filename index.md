@@ -64,53 +64,6 @@ This unit familiarises students with the state of the art in Design Verification
 
 [Download weeks 1 to 13 course content (ZIP archive)](/Lectures/Current.zip)
 
-### Labs & Drop-ins
-
-#### Lab 1
-
-This session covers setting up access to the software.
-
-We recommend you use the lab machines for reliable access. Remote accesss is also available via NoMachine on Frosty.
-
-Video: [https://tbc](https://tbc)
-
-[Lab sheet here.](Labs/Week 1.pdf)
-
-#### [Lab 2](Labs/Week-2)
-
-[See this page](Labs/Week-2)
-
-#### [Lab 3](Labs/Week-4)
-
-[See this page](Labs/Week-4)
-
-
-### Online resources
-
-The [Verification Academy](http://www.verificationacademy.com/) provides a comprehensive learning resource from basics to very advanced materials.
-
-
-### Additional materials
-
-A book that covers some of the course is:
-
-```
-Janick Bergeron
-Writing Testbenches: Functional Verification of HDL Models
-First Edition, Kluwer Academic Publishers, 2000, ISBN: 0-7923-7766-4
-Second Edition, Kluwer Academic Publishers, 2003, ISBN: 1-4020-7401-8 
-```
-
-In May 2005 a comprehensive textbook on Design Verification was published:
-
-```
-Bruce Wile, John Goss and Wolfgang Roesner
-Comprehensive Functional Verification
-Elsevier, 2005, ISBN: 0-12-751803-7 
-```
-
-Both books are available in the QB library.
-
 
 
 ## Software Access
@@ -194,6 +147,32 @@ For some answers to frequently asked questions about Verilog and Specman/E, plea
 * [Writing testbenches with Verilog](FAQs/dv_lab_verilog)
 * [Gluing Verilog modules together](FAQs/glue)
 * [Generating random numbers in Verilog](FAQs/random)
+
+### Online resources
+
+The [Verification Academy](http://www.verificationacademy.com/) provides a comprehensive learning resource from basics to very advanced materials.
+
+
+### Additional materials
+
+A book that covers some of the course is:
+
+```
+Janick Bergeron
+Writing Testbenches: Functional Verification of HDL Models
+First Edition, Kluwer Academic Publishers, 2000, ISBN: 0-7923-7766-4
+Second Edition, Kluwer Academic Publishers, 2003, ISBN: 1-4020-7401-8 
+```
+
+In May 2005 a comprehensive textbook on Design Verification was published:
+
+```
+Bruce Wile, John Goss and Wolfgang Roesner
+Comprehensive Functional Verification
+Elsevier, 2005, ISBN: 0-12-751803-7 
+```
+
+Both books are available in the QB library.
 
 
 ## Credits
