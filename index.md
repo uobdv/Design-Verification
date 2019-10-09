@@ -8,35 +8,37 @@ description: Design Verification module (COMS31700) at the University of Bristol
 
 Hello, welcome to the Design Verification module (COMS31700) website. Here you'll find all the course content and related information. Assessment materials are hosted privately on Blackboard at the University of Bristol. For further information about this course, please contact Kerstin Eder.
 
-This unit familiarises students with the state of the art in Design Verification, and gives them the technical background plus some of the practical skills expected from a professional design verification engineer. More details about the unit have been captured during an interview I gave at [DAC'2012](https://youtu.be/6lovqBEmryM).
+This unit familiarises students with the state of the art in Design Verification, and gives them the technical background plus some of the practical skills expected from a professional design verification engineer. More details about the unit have been captured during an interview Kerstin gave at [DAC'2012](https://youtu.be/6lovqBEmryM).
 
 
 
 ## Lecture and lab times
 
-*Autumn Term 2018*
+*Autumn Term 2019*
 
-- Lecture Times (weeks 1-12, but not week 8) - unless notified otherwise:
+- Lecture Times (weeks 2-12, but not week 8) - unless notified otherwise:
   Please check your timetable as there may be room changes at short notice.
-  - Tu 11:00 - 11:50 in QB 1.68,
-  - Tu 14:00 - 15:50 in MVB 1.11,
-  - There are no lectures in weeks 8. 
-- Design Verification scheduled lab: We 14:00 - 14:50 in MVB 2.11 - on demand
-- Design Verification Help Session: Th 17:00 - 17:50 in MVB 1.11 (QB 1.7 in week 4)
-  - Special Design Verification Help Session: Depending on demand, special help desk sessions can be arranged at this time. These can cover setting up access to the EDA tools, an introduction to using the EDA tools, help with using the languages, methodology, etc.
+  - Tu 12:00 - 12:50 in QB 1.68
+  - Tu 15:00 - 16:50 in MVB 1.11
+- Week 1: 
+  - Th 15:00 - 15:50 in FRY BLDG 2.41
+- There are no lectures in week 8. 
+- Design Verification scheduled lab time: Th 15:00 - 15:50 in MVB 1.15 - on demand
+- Design Verification help session: Fr 13:00 - 13:50 in MVB 1.11 (QB 1.68 in week 4)
+  - Special Design Verification help session: Depending on demand, special help desk sessions can be arranged at this time. These can cover setting up access to the EDA tools, an introduction to using the EDA tools, help with using the languages, methodology, etc.
 - You should spend at least 3h per week working through the course materials, exercises and assignments.
 
 
 
 ## Office hours for Kerstin (3.25 MVB)
 
-*Autumn Term 2018*
+*Autumn Term 2019*
 
 - You can always approach me before or after our lectures.
 - **Please note that sending me an email may not result in the type of help you may need.** This is because I get far too many emails per day to process them all in a timely manner.
-- **In addition, you can always visit my office.** You may want to phone me on 0117 9545146 before you come in order to check I'm actually in my office.
+- **In addition, you can always visit my office.** You may want to phone me on 0117 9545146 before you come, in order to check I'm actually in my office.
 - Generally, it may or may not be possible for me to listen to you straight away, but it will always be possible to make an appointment at the time when you ring or visit.
-- On Fridays I am on RESEARCH LEAVE and may not be contactable at all.
+- Please note that on Wednesday afternoons and on Fridays I am on RESEARCH LEAVE and may not be contactable at all.
 
 
 
@@ -119,38 +121,21 @@ Both books are available in the QB library.
 
 ## Software Access
 
-You will require access to two pieces of software for this module: MentorGraphic's ModelSim and Cadence's Specman. 
+You will require access to two EDA tools for this module: MentorGraphic's ModelSim and Cadence's SpecMan. 
 
-This software is available within the Linux labs and remotely via NoMachine/Frosty. However, **you must set up your profile correctly first. Access is not automatically available.**
+The EDA tools are available within the Linux labs in MVB and remotely via NoMachine on Frosty. However, **you must set up your profile correctly first. Access is not automatically available.**
 
-**We will be going through setting up software access in the lab on Wednesday 10th October 2018 (2pm to 2:50pm).** Please make sure you attend.
+**We will be given instructions by IT Services on how to set up access to these EDA tools.** 
 
-Please watch [this video](https://youtu.be/NQGvJ47RsSM) for details: [https://youtu.be/NQGvJ47RsSM](https://youtu.be/NQGvJ47RsSM )
+Please watch [this video](https://tbc) for details: [https://tbc](https://tbc)
 
-The following is the necessary script (as shown in the video):
-
-```sh
-PS1='\w\$ ' # If you know what this line does and you don't want it, you can delete it.
-
-export PATH=/usr/local/modelsim/modeltech/bin:$PATH 
-export MODEL_TECH=/usr/local/modelsim/modeltech/bin
-export MGLS_LICENSE_FILE=1717@ze-ls0.fen.bris.ac.uk,1717@ze-ls1.fen.bris.ac.uk,1717@ze-ls2.fen.bris.ac.uk
-source /usr/local/mentor/2016-17/scripts/QUESTA-CORE-PRIME_10.5c-4_RHELx86.sh 
-
-export CDS_LIC_FILE="5280@ze-ls0.fen.bris.ac.uk,5280@ze-ls1.fen.bris.ac.uk,5280@ze-ls2.fen.bris.ac.uk"
-export PATH=/usr/local/cadence/2016-17/jasper_2015.12/Linux64/bin:$PATH
-source /usr/local/cadence/current/cadence_ic.sh
-```
-
-We hope this works for you. If it doesn't please let us know and we will help you fix it. 
-
-**Note:** You will need to close and reopen any terminals before the changes to .bashrc will take effect. Re-"source"ing your .bashrc will not work and will result in the terminal closing immediately without warning - this is expected behaviour.
+The following are the command line instructions you need to use (as shown in the video): tbc
 
 
 
 ## Exercises
 
-The exercises are designed to further your understanding of Verilog, the simulator and the e language, and to give you an opportunity to practice the material covered during the lectures. The ModelSim simulator and SpecMan Elite are installed under Linux. Instructions on how to set up and run ModelSim and SpecMan are contained in the exercise sheets.
+The exercises are designed to further your understanding of Verilog, the simulator and the e language, and to give you an opportunity to practice the material covered during the lectures. The ModelSim simulator and SpecMan Elite are installed under Linux, for access instructions please see above. 
 
 ### Exercise 1
 
