@@ -100,7 +100,7 @@ For future use you might want to download and print the Verilog Reference Card: 
 
 ***This exercise introduces you to the ModelSim simulator by Mentor Graphics.***
 
-You can install the ]Student Edition of ModelSim](https://www.mentor.com/company/higher_ed/modelsim-student-edition) on your own machine. ModelSim will also be made available in our labs.
+You can install the [Student Edition of ModelSim](https://www.mentor.com/company/higher_ed/modelsim-student-edition) on your own machine. ModelSim will also be made available in our labs.
 
 [Introduction to the ModelSim Simulator](ModelSim/simulation_tutorial.pdf)
 
