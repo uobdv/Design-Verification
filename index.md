@@ -62,7 +62,7 @@ This unit familiarises students with the state of the art in Design Verification
 | 12  | Block-level Case-study including Formal Functional Verification          | [Print](Lectures/Current/12_BlockLevel_CaseStudy.p.pdf)            | [View](Lectures/Current/12_BlockLevel_CaseStudy.v.pdf)            | [PSL quick reference card for Verilog](Quick-References/PSL_quickref_verilog.pdf)<br>[PSL quick reference card for VHDL](Quick-References/PSL_quickref_vhdl.pdf)                                                                                                         |
 | 13  | SoC Verification (Guest Lecture by Mike Benjamin, TVS)                   | [Print](Lectures/Current/13_SoCVerification_MB_TVS.p.pdf)                      | [View](Lectures/Current/13_SoCVerification_MB_TVS.v.pdf)                      |                                                                                                                                                                                                                                                                          |
 
-[Download weeks 1 to 13 course content (ZIP archive)](/Lectures/Current.zip)
+[Download full course content (ZIP archive)](/Lectures/Current.zip)
 
 
 
@@ -99,6 +99,8 @@ For future use you might want to download and print the Verilog Reference Card: 
 ### Exercise 2
 
 ***This exercise introduces you to the ModelSim simulator by Mentor Graphics.***
+
+You can install the ]Student Edition of ModelSim](https://www.mentor.com/company/higher_ed/modelsim-student-edition) on your own machine. ModelSim will also be made available in our labs.
 
 [Introduction to the ModelSim Simulator](ModelSim/simulation_tutorial.pdf)
 
