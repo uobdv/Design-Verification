@@ -79,6 +79,18 @@ The following are the command line instructions you need to use from a terminal:
 > module load course/COMS31700
 ```
 
+You should then be able to call ModelSim from the command line:
+```
+> vsim &
+```
+
+You may also want to check whether you can call Cadence Specman:
+```
+> specview &
+```
+
+In both cases the tools should come up with GUI interfaces. If this works for you, then you are ready to start the exercises and your assignment. 
+
 ## Exercises
 
 The exercises are designed to further your understanding of Verilog, the simulator and the e language, and to give you an opportunity to practice the material covered during the lectures. The ModelSim simulator and SpecMan Elite are installed under Linux, for access instructions please see above. 
