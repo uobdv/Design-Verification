@@ -70,14 +70,13 @@ This unit familiarises students with the state of the art in Design Verification
 
 You will require access to two EDA tools for this module: MentorGraphic's ModelSim and Cadence's SpecMan. 
 
-The EDA tools are available within the Linux labs in MVB and remotely via NoMachine on Frosty. However, **you must set up your profile correctly first. Access is not automatically available.**
+The EDA tools are available within the Linux labs in MVB, 2.11 and 1.15, and remotely via NoMachine on Frosty (frosty.fen.bris.ac.uk). However, **you must set up your profile correctly, following the instructions given below. Access is not automatically available.**
 
-**We will be given instructions by IT Services on how to set up access to these EDA tools.** 
+The following are the command line instructions you need to use from a terminal:
 
-Please watch [this video](https://tbc) for details: [https://tbc](https://tbc)
+module use /eda/cadence/modules
 
-The following are the command line instructions you need to use (as shown in the video): tbc
-
+module load course/COMS31700
 
 
 ## Exercises
