@@ -66,7 +66,7 @@ This unit familiarises students with the state of the art in Design Verification
 
 
 
-## Software Access
+## EDA Software Access
 
 You will require access to two EDA tools for this module: MentorGraphic's ModelSim and Cadence's SpecMan. 
 
