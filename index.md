@@ -74,10 +74,10 @@ The EDA tools are available within the Linux labs in MVB, 2.11 and 1.15, and rem
 
 The following are the command line instructions you need to use from a terminal:
 
-module use /eda/cadence/modules
-
-module load course/COMS31700
-
+```
+> module use /eda/cadence/modules
+> module load course/COMS31700
+```
 
 ## Exercises
 
