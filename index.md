@@ -10,6 +10,16 @@ Hello, welcome to the Design Verification module (COMS31700) website. Here you'l
 
 This unit familiarises students with the state of the art in Design Verification, and gives them the technical background plus some of the practical skills expected from a professional design verification engineer. More details about the unit have been captured during an interview Kerstin gave at [DAC'2012](https://youtu.be/6lovqBEmryM).
 
+Students intending to take this unit should know that the unit requires a significant amount of initiative and motivation, independent study, e.g. teaching yourself a new language and familiarizing yourself with EDA tools in the labs in your own time, and diligent time management to meet the learning objectives. Pre-requisites to take this unit include programming skills, software engineering skills and a basic understanding of computer architecture. In return, on successful completion of this unit, you will be able to add to your CV knowledge of and skills in the following areas:
+- the Verilog Hardware Description Language, 
+- EDA tools including ModelSim and the Cadence verification tools, 
+- the e Verification Language, 
+- Testbench Automation Techniques, 
+- Constraint-Based Pseudo Random Test Generation, 
+- Assertion-based Verification, 
+- Coverage-Driven Verification,
+- Functional Formal Verification. 
+
 
 
 ## Lecture and lab times
