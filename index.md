@@ -103,6 +103,9 @@ You may also want to check whether you can call Cadence Specman:
 
 In both cases the tools should come up with GUI interfaces. If this works for you, then you are ready to start the exercises and your assignment. 
 
+IT Services have just released instructions on [how to use NoMachine for remote access to Frosty](Supplementary/NoMachine_Instructions_to_connect_to_frosty.pdf).
+
+
 ## Exercises
 
 The exercises are designed to further your understanding of Verilog, the simulator and the e language, and to give you an opportunity to practice the material covered during the lectures. The ModelSim simulator and SpecMan Elite are installed under Linux, for access instructions please see above. 
