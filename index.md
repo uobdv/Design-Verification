@@ -8,6 +8,8 @@ description: Design Verification module (COMS30026) at the University of Bristol
 
 Hello, welcome to the Design Verification module (COMS30026) website. Here you'll find all the course content and related information. Lecture recordings and information on courswork (where applicable) are hosted privately on Blackboard at the University of Bristol. For further information about this course, please contact Kerstin Eder.
 
+## Overview
+
 This unit familiarises students with the state of the art in Design Verification, and gives them the technical background plus some of the practical skills expected from a professional design verification engineer. More details about the unit have been captured during an interview Kerstin gave at [DAC'2012](https://youtu.be/6lovqBEmryM).
 
 ## What you need to know prior to taking this unit
@@ -34,7 +36,7 @@ Students intending to take this unit should know that the unit requires a signif
 
 - Lab-based seminars with associated remote desktop bookings are scheduled at 12:00 on Tuesdays in weeks 1-7 and also in weeks 11-12. These can cover setting up remote access to the EDA tools, an introduction to using the EDA tools, help with using the various languages, methodologies, etc.
 
-- A peer learning sessions are scheduled at 10:00 on Fridays in weeks 1-7 and also in weeks 11-12. 
+- Peer learning sessions are scheduled at 10:00 on Fridays in weeks 1-7 and also in weeks 11-12. 
 
 
 ## Making contact
