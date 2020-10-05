@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "COMS31700: Design Verification (UoB)"
-description: Design Verification module (COMS31700) at the University of Bristol
+title: "COMS30026: Design Verification (UoB)"
+description: Design Verification module (COMS30026) at the University of Bristol
 ---
 
 ## Welcome to Design Verification
 
-Hello, welcome to the Design Verification module (COMS31700) website. Here you'll find all the course content and related information. Assessment materials are hosted privately on Blackboard at the University of Bristol. For further information about this course, please contact Kerstin Eder.
+Hello, welcome to the Design Verification module (COMS30026) website. Here you'll find all the course content and related information. Lecture recordings and information on courswork (where applicable) are hosted privately on Blackboard at the University of Bristol. For further information about this course, please contact Kerstin Eder.
 
 This unit familiarises students with the state of the art in Design Verification, and gives them the technical background plus some of the practical skills expected from a professional design verification engineer. More details about the unit have been captured during an interview Kerstin gave at [DAC'2012](https://youtu.be/6lovqBEmryM).
 
@@ -26,31 +26,30 @@ Students intending to take this unit should know that the unit requires a signif
 
 ## Lecture and lab times
 
-*Autumn Term 2019*
+*Autumn Term 2020*
 
-- Lecture Times (weeks 2-12, but not week 8) - unless notified otherwise:
-  Please check your timetable as there may be room changes at short notice.
-  - Tu 12:00 - 12:50 in QB 1.68
-  - Tu 15:00 - 16:50 in MVB 1.11
-- Week 1: 
-  - Th 15:00 - 15:50 in FRY BLDG 2.41
-- There are no lectures in week 8. 
-- Design Verification scheduled lab time: Th 15:00 - 15:50 in MVB 1.15 - on demand
-- Design Verification help session: Fr 13:00 - 13:50 in MVB 1.11 (QB 1.68 in week 4)
-  - Special Design Verification help session: Depending on demand, special help desk sessions can be arranged at this time. These can cover setting up access to the EDA tools, an introduction to using the EDA tools, help with using the languages, methodology, etc.
-- You should spend at least 3h per week working through the course materials, exercises and assignments.
+- Lecture recordings will be made available on a weekly basis via Blackboard. There are roughly two to three hours of recordings per week. 
+
+- Online synchronous sessions (named Lectures in the timetable) are scheduled at 11:00 on Mondays in weeks 1-7 and also in weeks 11-12.
+
+- Lab-based seminars with associated remote desktop bookings are scheduled at 12:00 on Tuesdays in weeks 1-7 and also in weeks 11-12. These can cover setting up remote access to the EDA tools, an introduction to using the EDA tools, help with using the various languages, methodologies, etc.
+
+- A peer learning sessions are scheduled at 10:00 on Fridays in weeks 1-7 and also in weeks 11-12. 
 
 
+## Making contact
 
-## Office hours for Kerstin (3.25 MVB)
+*Autumn Term 2020*
 
-*Autumn Term 2019*
 
-- You can always approach me before or after our lectures.
-- **Please note that sending me an email may not result in the type of help you may need.** This is because I get far too many emails per day to process them all in a timely manner.
-- **In addition, you can always visit my office.** You may want to phone me on 0117 9545146 before you come, in order to check I'm actually in my office.
-- Generally, it may or may not be possible for me to listen to you straight away, but it will always be possible to make an appointment at the time when you ring or visit.
-- Please note that on Wednesday afternoons and on Fridays I am on RESEARCH LEAVE and may not be contactable at all.
+- Your main ways of getting help with this unit are:
+  1. Ask at the online synchronous (Lecture) sessions on Mondays.
+  2. Ask a TA, ideally during the labs/seminars on Tuesdays.
+  3. Post your question on the online forum for the unit.
+  4. Ask a fellow student at the peer learning sessions on Fridays. 
+
+- **Please note that sending Kerstin an email may not result in the type of help you may need.** This is because Kerstin gets far too many emails per day to process them all in a timely manner.
+
 
 
 
@@ -80,15 +79,15 @@ Students intending to take this unit should know that the unit requires a signif
 
 ## EDA Software Access
 
-You will require access to two EDA tools for this module: MentorGraphic's ModelSim and Cadence's SpecMan. 
+You will require access to two EDA tools for this module: MentorGraphic's ModelSim and Cadence's SpecMan and JasperGold. 
 
-The EDA tools are available within the Linux labs in MVB, 2.11 and 1.15, and remotely via NoMachine on Frosty (frosty.fen.bris.ac.uk). However, **you must set up your profile correctly, following the instructions given below. Access is not automatically available.**
+The EDA tools are accessible in the Linux labs in MVB, 2.11 and 1.15, and also remotely via X2GO. Further instructions will be made availalbe shortly on how to set up X2GO (see below).
 
-The following are the command line instructions you need to use from a terminal:
+The following are the command line instructions you can use from a terminal once you are logged in, either directly in a lab or remotely:
 
 ```
 > module use /eda/cadence/modules
-> module load course/COMS31700
+> module load course/COMS30026
 ```
 
 You should then be able to call ModelSim from the command line:
@@ -96,14 +95,15 @@ You should then be able to call ModelSim from the command line:
 > vsim &
 ```
 
-You may also want to check whether you can call Cadence Specman:
+You may also want to check whether you can call Cadence Specman and JasperGold:
 ```
 > specview &
+> jaspergold &
 ```
 
-In both cases the tools should come up with GUI interfaces. If this works for you, then you are ready to start the exercises and your assignment. 
+In both cases the tools should come up with GUI interfaces. If this works for you, then you are ready to start the exercises and, where applicable your coursework.
 
-IT Services have just released instructions on [how to use NoMachine for remote access to Frosty](Supplementary/NoMachine_Instructions_to_connect_to_frosty.pdf).
+The instructions on [how to use NoMachineX2GO for remote access](Supplementary/tbc.pdf) will be made available here shortly.
 
 
 ## Exercises
