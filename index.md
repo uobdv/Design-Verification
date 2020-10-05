@@ -6,7 +6,7 @@ description: Design Verification module (COMS30026) at the University of Bristol
 
 ## Welcome to Design Verification
 
-Hello, welcome to the Design Verification module (COMS30026) website. Here you'll find all the course content and related information. Lecture recordings and information on courswork (where applicable) are hosted privately on Blackboard at the University of Bristol. For further information about this course, please contact Kerstin Eder.
+Hello, welcome to the Design Verification module (COMS30026) website. Here you'll find all the course content and related information. Lecture recordings and information on coursework (where applicable) are hosted privately on Blackboard at the University of Bristol. For further information about this course, please contact Kerstin Eder.
 
 ## Overview
 
@@ -14,7 +14,7 @@ This unit familiarises students with the state of the art in Design Verification
 
 ## What you need to know prior to taking this unit
 
-Students intending to take this unit should know that the unit requires a significant amount of initiative and motivation, independent study, e.g. teaching yourself a new language and familiarizing yourself with EDA tools in the labs, and diligent time management to meet the learning objectives. Essential pre-requisites to take this unit include programming skills, software engineering skills and a basic understanding of computer architecture. In return, on successful completion of this unit, you will be able to add to your CV knowledge of and skills in the following areas:
+Students intending to take this unit should know that the unit requires a significant amount of initiative and motivation, independent study, e.g. teaching yourself a new language and familiarising yourself with EDA tools in the labs, and diligent time management to meet the learning objectives. Essential pre-requisites to take this unit include programming skills, software engineering skills and a basic understanding of computer architecture. In return, on successful completion of this unit, you will be able to add to your CV knowledge of and skills in the following areas:
 - the Verilog Hardware Description Language, 
 - EDA tools including ModelSim and the Cadence verification tools, 
 - the e Verification Language, 
@@ -32,7 +32,7 @@ Students intending to take this unit should know that the unit requires a signif
 
 - Lecture recordings will be made available on a weekly basis via Blackboard. There are roughly two to three hours of recordings per week. 
 
-- Online synchronous sessions (named Lectures in the timetable) are scheduled at 11:00 on Mondays in weeks 1-7 and also in weeks 11-12. We will use these to answer questions, to focus on specific topics that require interaction and/or debate, and to discuss the supplementary material (see below), e.g. you may be asked to read an article or a scietific paper and participate in a discussion. 
+- Online synchronous sessions (named Lectures in the timetable) are scheduled at 11:00 on Mondays in weeks 1-7 and also in weeks 11-12. We will use these to answer questions, to focus on specific topics that require interaction and/or debate, and to discuss the supplementary material (see below), e.g. you may be asked to read an article or a scientific paper and participate in a discussion. 
 
 - Lab-based seminars with associated remote desktop bookings are scheduled at 12:00 on Tuesdays in weeks 1-7 and also in weeks 11-12. These can cover setting up remote access to the EDA tools, an introduction to using the EDA tools, help with using the various languages, methodologies, etc.
 
@@ -59,6 +59,8 @@ Students intending to take this unit should know that the unit requires a signif
 
 ### Lectures
 
+## The slides provided in the table below will be updated each week with the revised versions that have been used for the recordings. The recordings may not cover all slides; some may be left for discussion during an online session, and some provide further detail for self study. 
+
 | #   | Topic                                                                    | Print                                                                          | View                                                                          | Supplementary material                                                                                                                                                                                                                                                   |
 |-----|--------------------------------------------------------------------------|--------------------------------------------------------------------------------|-------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1   | Introduction                                                             | [Print](Lectures/Current/1_Introduction_to_DV.p.pdf)                     | [View](Lectures/Current/1_Introduction_to_DV.v.pdf)                     | [Verification challenges](Supplementary/VerificationChallenges.TVS.pdf)<br>[Intelligent Testing (Dot Graham)](Supplementary/IntelligentTesting.DotGraham.pdf) <br> [ITRS Reports](http://www.itrs2.net/itrs-reports.html)                                                                                                         |
@@ -83,7 +85,7 @@ Students intending to take this unit should know that the unit requires a signif
 
 You will require access to two EDA tools for this module: MentorGraphic's ModelSim and Cadence's SpecMan and JasperGold. 
 
-The EDA tools are accessible in the Linux labs in MVB, 2.11 and 1.15, and also remotely via X2GO. Further instructions will be made availalbe shortly on how to set up X2GO (see below).
+The EDA tools are accessible in the Linux labs in MVB, 2.11 and 1.15, and also remotely via X2GO. Further instructions will be made available shortly on how to set up X2GO (see below).
 
 The following are the command line instructions you can use from a terminal once you are logged in, either directly in a lab or remotely:
 
@@ -97,7 +99,7 @@ You should then be able to call ModelSim from the command line:
 > vsim &
 ```
 
-You may also want to check whether you can call Cadence Specman and JasperGold:
+You may also want to check whether you can call Cadence SpecMan and JasperGold:
 ```
 > specview &
 > jaspergold &
@@ -105,7 +107,7 @@ You may also want to check whether you can call Cadence Specman and JasperGold:
 
 In both cases the tools should come up with GUI interfaces. If this works for you, then you are ready to start the exercises and, where applicable your coursework.
 
-The instructions on [how to use NoMachineX2GO for remote access](Supplementary/tbc.pdf) will be made available here shortly.
+The instructions on [how to use X2GO for remote access](Supplementary/tbc.pdf) will be made available here shortly.
 
 
 ## Exercises
