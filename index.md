@@ -91,7 +91,7 @@ The following are the command line instructions you can use from a terminal once
 
 ```
 > module use /eda/cadence/modules
-> module load course/COMS30026
+> module load course/COMS30026_2020
 ```
 
 You should then be able to call ModelSim from the command line:
@@ -107,7 +107,7 @@ You may also want to check whether you can call Cadence SpecMan and JasperGold:
 
 In both cases the tools should come up with GUI interfaces. If this works for you, then you are ready to start the exercises and, where applicable your coursework.
 
-The instructions on [how to use X2GO for remote access](Supplementary/tbc.pdf) will be made available here shortly.
+The instructions on [how to use X2GO for remote access](/X2GO_Download_Page.pdf) will be made available here shortly.
 
 
 ## Exercises
