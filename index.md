@@ -59,7 +59,7 @@ Students intending to take this unit should know that the unit requires a signif
 
 ### Lectures
 
-The slides provided in the table below will be updated each week with the revised versions that have been used for the recordings. The recordings may not cover all slides; some may be left for discussion during an online session, and some provide further detail for self study. 
+The slides provided in the table below will be updated each week with the revised versions that have been used for the recordings. Please note that the recordings may not cover all slides; some may be left for discussion during an online session, and some may provide further in-depth detail for self study. 
 
 | #   | Topic                                                                    | Print                                                                          | View                                                                          | Supplementary material                                                                                                                                                                                                                                                   |
 |-----|--------------------------------------------------------------------------|--------------------------------------------------------------------------------|-------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
