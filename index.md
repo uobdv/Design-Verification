@@ -32,7 +32,7 @@ Students intending to take this unit should know that the unit requires a signif
 
 - Lecture recordings will be made available on a weekly basis via Blackboard. There are roughly two to three hours of recordings per week. 
 
-- Online synchronous sessions (named Lectures in the timetable) are scheduled at 11:00 on Mondays in weeks 1-7 and also in weeks 11-12.
+- Online synchronous sessions (named Lectures in the timetable) are scheduled at 11:00 on Mondays in weeks 1-7 and also in weeks 11-12. We will use these to answer questions, to focus on specific topics that require interaction and/or debate, and to discuss the supplementary material (see below), e.g. you may be asked to read an article or a scietific paper and participate in a discussion. 
 
 - Lab-based seminars with associated remote desktop bookings are scheduled at 12:00 on Tuesdays in weeks 1-7 and also in weeks 11-12. These can cover setting up remote access to the EDA tools, an introduction to using the EDA tools, help with using the various languages, methodologies, etc.
 
