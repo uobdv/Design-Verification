@@ -91,7 +91,7 @@ The following are the command line instructions you can use from a terminal once
 
 ```
 > module use /eda/cadence/modules
-> module load course/COMS30026_2020
+> module load course/COMS30026
 ```
 
 You should then be able to call ModelSim from the command line:
