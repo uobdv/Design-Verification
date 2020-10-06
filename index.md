@@ -16,7 +16,7 @@ This unit familiarises students with the state of the art in Design Verification
 
 Students intending to take this unit should know that the unit requires a significant amount of initiative and motivation, independent study, e.g. teaching yourself a new language and familiarising yourself with EDA tools in the labs, and diligent time management to meet the learning objectives. Essential pre-requisites to take this unit include programming skills, software engineering skills and a basic understanding of computer architecture. In return, on successful completion of this unit, you will be able to add to your CV knowledge of and skills in the following areas:
 - the Verilog Hardware Description Language, 
-- EDA tools including ModelSim and the Cadence verification tools, 
+- EDA tools including ModelSim/QuestaSim and the Cadence verification tools, 
 - the e Verification Language, 
 - Testbench Automation Techniques, 
 - Constraint-Based Pseudo Random Test Generation, 
@@ -83,7 +83,7 @@ The slides provided in the table below will be updated each week with the revise
 
 ## EDA Software Access
 
-You will require access to two EDA tools for this module: MentorGraphic's ModelSim and Cadence's SpecMan and JasperGold. 
+You will require access to two EDA tools for this module: MentorGraphic's ModelSim/QuestaSim and Cadence's SpecMan and JasperGold. 
 
 The EDA tools are accessible in the Linux labs in MVB, 2.11 and 1.15, and also remotely. To set up remote access you need to follow the instructions on [how to set up X2GO](https://uob.sharepoint.com/sites/itservices/SitePages/fits-engineering-linux-x2go.aspx).
 
@@ -94,7 +94,7 @@ The following are the command line instructions you can use from a terminal once
 > module load course/COMS30026
 ```
 
-You should then be able to call ModelSim from the command line:
+You should then be able to call ModelSim/QuestaSim from the command line:
 ```
 > vsim &
 ```
@@ -112,7 +112,7 @@ You can also download this worksheet on [how to use X2GO for remote access](/X2G
 
 ## Exercises
 
-The exercises are designed to further your understanding of Verilog, the simulator and the e language, and to give you an opportunity to practice the material covered during the lectures. The ModelSim simulator and SpecMan Elite are installed under Linux, for access instructions please see above. 
+The exercises are designed to further your understanding of Verilog, the simulator and the e language, and to give you an opportunity to practice the material covered during the lectures. The ModelSim/QuestaSim simulator and SpecMan Elite are installed under Linux, for access instructions please see above. 
 
 ### Exercise 1
 
@@ -128,15 +128,15 @@ For future use you might want to download and print the Verilog Reference Card: 
 
 ### Exercise 2
 
-***This exercise introduces you to the ModelSim simulator by Mentor.***
+***This exercise introduces you to the ModelSim/QuestaSim simulator by Mentor.***
 
-You can install the [Student Edition of ModelSim](https://www.mentor.com/company/higher_ed/modelsim-student-edition) on your own machine. ModelSim will also be made available in our labs.
+You can install the [Student Edition of ModelSim](https://www.mentor.com/company/higher_ed/modelsim-student-edition) on your own machine. ModelSim/QuestaSim will also be made available in our labs.
 
-[Introduction to the ModelSim Simulator](ModelSim/simulation_tutorial.pdf)
+[Introduction to the ModelSim/QuestaSim Simulator](ModelSim/simulation_tutorial.pdf)
 
-For future use you might want to download and print the ModelSim quick reference guide: [modelsim_se_6_5_quick_ref.pdf](ModelSim/modelsim_se_6_5_quick_ref.pdf)
+For future use you might want to download and print the ModelSim/QuestaSim quick reference guide: [modelsim_se_6_5_quick_ref.pdf](ModelSim/modelsim_se_6_5_quick_ref.pdf)
 
-Files needed for the ModelSim introduction:
+Files needed for the ModelSim/QuestaSim introduction:
 
 [ZIP archive of all the below files](ModelSim/ModelSim-Tutorial-Src.zip)
 
