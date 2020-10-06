@@ -85,7 +85,7 @@ The slides provided in the table below will be updated each week with the revise
 
 You will require access to two EDA tools for this module: MentorGraphic's ModelSim and Cadence's SpecMan and JasperGold. 
 
-The EDA tools are accessible in the Linux labs in MVB, 2.11 and 1.15, and also remotely via X2GO. Further instructions will be made available shortly on how to set up X2GO (see below).
+The EDA tools are accessible in the Linux labs in MVB, 2.11 and 1.15, and also remotely. To set up remote access you need to follow the instructions on [how to set up X2GO](https://uob.sharepoint.com/sites/itservices/SitePages/fits-engineering-linux-x2go.aspx).
 
 The following are the command line instructions you can use from a terminal once you are logged in, either directly in a lab or remotely:
 
@@ -105,9 +105,9 @@ You may also want to check whether you can call Cadence SpecMan and JasperGold:
 > jaspergold &
 ```
 
-In both cases the tools should come up with GUI interfaces. If this works for you, then you are ready to start the exercises and, where applicable your coursework.
+In both cases the tools should come up with GUI interfaces. If this works for you, then you are ready to start the exercises and, where applicable, your coursework.
 
-The instructions on [how to use X2GO for remote access](/X2GO_Download_Page.pdf) will be made available here shortly.
+You can also download this worksheet on [how to use X2GO for remote access](/X2GO_Download_Page.pdf).
 
 
 ## Exercises
