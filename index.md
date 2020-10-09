@@ -79,7 +79,9 @@ The slides provided in the table below will be updated each week with the revise
 | 12  | Block-level Case-study including Formal Functional Verification          | [View](Lectures/Current/12_BlockLevel_CaseStudy.v.pdf)                        | [PSL quick reference card for Verilog](Quick-References/PSL_quickref_verilog.pdf)<br>[PSL quick reference card for VHDL](Quick-References/PSL_quickref_vhdl.pdf) <br> [SVA quick reference](Quick-References/SVA_QuickReference.CDNS.pdf)                                                                                                         |
 | 13  | SoC Verification (Guest Lecture by Mike Benjamin, TVS)                   | [View](Lectures/Current/13_SoCVerification_MB_TVS.v.pdf)                      |                                                                                                                                                                                                                                                                          |
 
-[Download full course content (ZIP archive)](/Lectures/Current.zip)
+[Download full course content (slides) FROM LAST YEAR (ZIP archive)](/Lectures/Current.zip)
+
+A new version with ALL SLIDES FROM THIS YEAR will be made available at the end of the unit, i.e. before week 11. 
 
 
 
