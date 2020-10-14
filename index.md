@@ -30,14 +30,15 @@ Students intending to take this unit should know that the unit requires a signif
 
 *Autumn Term 2020*
 
-- Lecture recordings will be made available on a weekly basis via Blackboard. There are roughly two to three hours of recordings per week. 
+- Lecture recordings will be made available on a weekly basis via Blackboard. There are roughly two hours of recordings per week. 
 
-- Online synchronous sessions (named Lectures in the timetable) are scheduled at 11:00 on Mondays in weeks 1-7 and also in weeks 11-12. We will use these to answer questions, to focus on specific topics that require interaction and/or debate, and to discuss the supplementary material (see below), e.g. you may be asked to read an article or a scientific paper and participate in a discussion. 
+- Online synchronous sessions (named Lectures in the timetable) are scheduled at 11:00 on Mondays in weeks 1-7 and also in weeks 11-12. We will use these to answer questions, to focus on specific topics that require interaction and/or debate, and to discuss the supplementary material (see below), e.g. you may be asked to read an article or a scientific paper and participate in a discussion. Any slides presented can be found under Live Sessions below.
 
 - Lab-based seminars with associated remote desktop bookings are scheduled at 12:00 on Tuesdays in weeks 1-7 and also in weeks 11-12. These can cover setting up remote access to the EDA tools, an introduction to using the EDA tools, help with using the various languages, methodologies, etc.
 
 - Peer learning sessions are scheduled at 10:00 on Fridays in weeks 1-7 and also in weeks 11-12. 
 
+- You are expected to engage with the supplementary material and opportunities offered via the live sessions on a weekly basis.
 
 ## Making contact
 
@@ -82,7 +83,12 @@ The slides provided in the table below will be updated each week with the revise
 
 A new version with ALL SLIDES FROM THIS YEAR will be made available at the end of the unit, i.e. before week 11. [Download full course content (slides) FROM LAST YEAR (ZIP archive)](/Lectures/Current.zip)
 
+### Live Sessions
 
+The slides presented at live sessions, if any, will be made available here in reverse chronological order, i.e. the most recent first. Recordings of the live sessions are available via the associated Team grp-CMOS30026_DesignVerification.
+
+* [Slides](/LiveSessions/W2_COMS30026_Design_Verification_LiveSession.pdf) from live session on 12 October 2020
+* [Slides](/LiveSessions/W1_Introduction_to_DVunit.pdf) from live session on 5 October 2020
 
 ## EDA Software Access
 
