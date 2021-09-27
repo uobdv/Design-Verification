@@ -83,7 +83,7 @@ The slides provided in the table below may be updated with revised versions that
 | 13  | Week 11   | SoC Verification (Guest Lecture by Mike Benjamin, TVS)       | [View](Lectures/Current/13_SoCVerification_MB_TVS.v.pdf)                      | [Functional verification of IBM's POWER7 processor core](Supplementary/Mainline_Functional_Verification_of_IBMs_POWER7_Processor_Core.pdf) |
 
 
-[Download full course content (ALL slides) as a ZIP archive.](/Lectures/Current.zip)
+<!--[Download full course content (ALL slides) as a ZIP archive.](/Lectures/Current.zip)-->
 
 ### Live Sessions
 
