@@ -90,6 +90,7 @@ The slides provided in the table below may be updated with revised versions that
 
 The slides presented at live sessions, if any, will be made available here in reverse chronological order, i.e. the most recent first. Recordings of the live sessions are available via the associated Team ***COMS30026: Design Verification (Teaching Unit) 2021/22 (TB-1, A)***.
 
+* [Slides](LiveSessions/W8_COMS30026_Design_Verification_LiveSession.pdf) from live session on 19 November 2021
 * [Slides](LiveSessions/W7_COMS30026_Design_Verification_LiveSession.pdf) from live session on 10 November 2021
 * [Slides](LiveSessions/W5_COMS30026_Design_Verification_LiveSession.pdf) from live session on 27 October 2021
 * [Slides](LiveSessions/W4_COMS30026_Design_Verification_LiveSession.pdf) from live session on 20 October 2021
