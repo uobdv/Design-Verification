@@ -51,7 +51,7 @@ Students intending to take this unit should know that the unit requires a signif
   3. Post your question on the online Blackboard forum for the unit.
   4. Ask a fellow student via Teams.
 
-- **Please note that sending Kerstin an email may not result in the type of help you may need.** This is because Kerstin gets far too many emails per day to process them all in a timely manner.
+- **Please avoid sending Kerstin an email to get help as this may not result in the type of help you may need.** This is because Kerstin gets far too many emails per day to process them all in a timely manner.
 
 
 
