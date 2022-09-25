@@ -20,7 +20,7 @@ Students intending to take this unit should know that the unit requires a signif
 - the e Verification Language, 
 - Testbench Automation Techniques, 
 - Constraint-Based Pseudo Random Test Generation, 
-- Assertion-based Verification, 
+- Assertion-Based Verification, 
 - Coverage-Driven Verification,
 - Functional Formal Verification. 
 
@@ -28,24 +28,26 @@ Students intending to take this unit should know that the unit requires a signif
 
 ## Lecture and lab times
 
-*Autumn Term 2021*
+*Autumn Term 2022*
 
-- Lecture recordings will be made available on a weekly basis via Blackboard. There are between two and three hours of recordings per week. 
+- Lectures are scheduled in weeks 1-5, 7-8 and 12 on Mondays, 9:00 and 17:00, and on Wednesdays, 9:00. Lecture theatres can be found in your timetable.
 
-- Online synchronous sessions (named Lectures in the timetable) are scheduled at 10:00 on Wednesdays in weeks 1-5, 7-8 and also in week 12. We will use these to answer questions, to focus on specific topics that require interaction and/or debate, and to discuss the supplementary material (see below), e.g. you may be asked to read an article or a scientific paper and participate in a discussion. Any slides presented can be found under Live Sessions below.
+- Lecture recordings will be made available via Blackboard. There are between two and three hours of recordings per week. 
 
-- Lab-based seminars are scheduled at 9:00 on Fridays in weeks 1-5, 7-8 and also in week 12. These can be taken in MVB 1.15 or via Teams online; TA support will be provided online. Seminars can cover setting up remote access to the EDA tools, an introduction to using the EDA tools, help with using the various languages, methodologies, etc. 
+!- Online synchronous sessions (named Lectures in the timetable) are scheduled at 10:00 on Wednesdays in weeks 1-5, 7-8 and also in week 12. We will use these to answer questions, to focus on specific topics that require interaction and/or debate, and to discuss the supplementary material (see below), e.g. you may be asked to read an article or a scientific paper and participate in a discussion. Any slides presented can be found under Live Sessions below.
 
-- You are expected to engage with the supplementary material and opportunities offered via the live sessions on a weekly basis.
+- Lab-based seminars are scheduled in weeks 1-4 and 7-12 on Wednesdays at 14:00 in MVB 1.15. Labs are supervised by an experienced Teaching Assistant (TA). Seminars can cover setting up remote access to the EDA tools, an introduction to using the EDA tools, help with using the various languages, methodologies, etc. 
+
+- You are expected to engage with the supplementary material and opportunities mentioned in the lectures and on this unit page.
 
 ## Making contact
 
-*Autumn Term 2021*
+*Autumn Term 2022*
 
 
 - Your main ways of getting help with this unit are:
-  1. Ask at the online synchronous (Lecture) sessions on Wednesdays.
-  2. Ask the unit TA, ideally during the labs/seminars on Fridays.
+  1. Ask directly after the 9:00 lectures.
+  2. Ask the unit TA, ideally during the labs/seminars on Wednesdays.
   3. Post your question on the online Blackboard forum for the unit.
   4. Ask a fellow student via Teams.
 
