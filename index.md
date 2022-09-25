@@ -88,6 +88,7 @@ The slides provided in the table below may be updated with revised versions as n
 
 <!--[Download full course content (ALL slides) as a ZIP archive.](/Lectures/Current.zip)-->
 
+<!--
 ### Live Sessions
 
 The slides presented at live sessions, if any, will be made available here in reverse chronological order, i.e. the most recent first. Recordings of the live sessions are available via the associated Team ***COMS30026: Design Verification (Teaching Unit) 2021/22 (TB-1, A)***.
@@ -99,7 +100,7 @@ The slides presented at live sessions, if any, will be made available here in re
 * [Slides](LiveSessions/W3_COMS30026_Design_Verification_LiveSession.pdf) from live session on 13 October 2021
 * [Slides](LiveSessions/W2_COMS30026_Design_Verification_LiveSession.pdf) from live session on 6 October 2021
 * [Slides](LiveSessions/W1_COMS30026_Design_Verification_LiveSession.pdf) from live session on 29 September 2021
-
+-->
 
 ## EDA Software Access
 
