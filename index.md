@@ -30,15 +30,15 @@ Students intending to take this unit should know that the unit requires a signif
 
 *Autumn Term 2022*
 
-- Lectures are scheduled in weeks 1-5, 7-8 and 12 on Mondays, 9:00 and 17:00, and on Wednesdays, 9:00. Lecture theatres can be found in your timetable.
+- Lectures are scheduled in weeks 1-5, 7-8 and 12 on Mondays, 9:00 and 17:00, and on Wednesdays, 9:00. Lecture theatres can be found in your timetable. Any changes to scheduled lecture times and lecture theatres will be announced during lectures and via Blackboard.
 
 - Lecture recordings will be made available via Blackboard. There are between two and three hours of recordings per week. 
 
-!- Online synchronous sessions (named Lectures in the timetable) are scheduled at 10:00 on Wednesdays in weeks 1-5, 7-8 and also in week 12. We will use these to answer questions, to focus on specific topics that require interaction and/or debate, and to discuss the supplementary material (see below), e.g. you may be asked to read an article or a scientific paper and participate in a discussion. Any slides presented can be found under Live Sessions below.
+<!-- - Online synchronous sessions (named Lectures in the timetable) are scheduled at 10:00 on Wednesdays in weeks 1-5, 7-8 and also in week 12. We will use these to answer questions, to focus on specific topics that require interaction and/or debate, and to discuss the supplementary material (see below), e.g. you may be asked to read an article or a scientific paper and participate in a discussion. Any slides presented can be found under Live Sessions below.-->
 
-- Lab-based seminars are scheduled in weeks 1-4 and 7-12 on Wednesdays at 14:00 in MVB 1.15. Labs are supervised by an experienced Teaching Assistant (TA). Seminars can cover setting up remote access to the EDA tools, an introduction to using the EDA tools, help with using the various languages, methodologies, etc. 
+- Lab-based seminars are scheduled in weeks 1-4 and 7-12 on Wednesdays at 14:00 in MVB 1.15. Labs are supervised by an experienced Teaching Assistant (TA). Seminars can cover setting up remote access to the EDA tools, an introduction to using the EDA tools, help with using the various languages, methodologies, tools, etc. 
 
-- You are expected to engage with the supplementary material and opportunities mentioned in the lectures and on this unit page.
+- You are expected to engage with the supplementary material and the opportunities highlighted in the lectures and on this unit page.
 
 ## Making contact
 
