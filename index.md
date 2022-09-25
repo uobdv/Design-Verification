@@ -139,7 +139,7 @@ The exercises are designed to further your understanding of Verilog, the simulat
 
 ***Your first exercise is a self-study exercise for you to teach yourself the basics of the Hardware Description Language (HDL) Verilog.***
 
-In particular, you will need the behavioural coding style for the first assignment. Please remember that we "only" want to verify HDL designs. This means that we need to be able to understand the basics of HDLs (in this case Verilog); we do NOT intend to design hardware in this unit.
+In particular, you will need the behavioural coding style for the first practical. Please remember that we "only" want to verify HDL designs. This means that we need to be able to understand the basics of HDLs (in this case Verilog); we do NOT intend to design hardware in this unit.
   
 There are several good tutorials on Verilog online. ALDEC Inc. offers the Evita Verilog interacitve tutorial. To download it you need to sign up on the ALDEC web page. Please use your University of Bristol email address to do so; ALDEC do not accept generic emails like gmail, yahoo or hotmail. Installation is straightforward; the tutorial is self-extracting and runs under Windows.
 
@@ -149,9 +149,9 @@ For future use you might want to download and print the Verilog Reference Card: 
 
 ### Exercise 2
 
-***This exercise introduces you to the ModelSim/QuestaSim simulator by Mentor.***
+***This exercise introduces you to the ModelSim/QuestaSim simulator by Siemens.***
 
-You can install the [Student Edition of ModelSim](https://www.mentor.com/company/higher_ed/modelsim-student-edition) on your own machine. ModelSim/QuestaSim will also be made available in our labs.
+<!-- You can install the [Student Edition of ModelSim](https://www.mentor.com/company/higher_ed/modelsim-student-edition) on your own machine. ModelSim/QuestaSim will also be made available in our labs. -->
 
 [Introduction to the ModelSim/QuestaSim Simulator](ModelSim/simulation_tutorial.pdf)
 
