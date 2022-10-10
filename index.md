@@ -86,11 +86,11 @@ The slides provided in the table below may be updated with revised versions as n
 
 <!--[Download full course content (ALL slides) as a ZIP archive.](/Lectures/Current.zip)-->
 
-### Weekly Status Update 
+### Weekly Status Updates 
 
 <!--The slides presented at live sessions, if any, will be made available here in reverse chronological order, i.e. the most recent first. Recordings of the live sessions are available via the associated Team ***COMS30026: Design Verification (Teaching Unit) 2021/22 (TB-1, A)***.-->
 
-These slides capture what we have covered in the past week and where you are expected to with respect to the course materials be at this stage. They include optional activities and opportunities for you to learn material beyond what has been taught in this unit.
+These slides capture what we have covered in the past week and where you are expected to be with respect to the course materials at this stage. They include optional activities and opportunities for you to learn material beyond what has been taught in this unit.
 
 <!--
 * [Slides](StatusUpdate/W8_COMS30026_Design_Verification_StatusUpdate.pdf) from live session on 19 November 2021
