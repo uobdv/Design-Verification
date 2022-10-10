@@ -86,19 +86,22 @@ The slides provided in the table below may be updated with revised versions as n
 
 <!--[Download full course content (ALL slides) as a ZIP archive.](/Lectures/Current.zip)-->
 
+### Weekly Status Update 
+
+<!--The slides presented at live sessions, if any, will be made available here in reverse chronological order, i.e. the most recent first. Recordings of the live sessions are available via the associated Team ***COMS30026: Design Verification (Teaching Unit) 2021/22 (TB-1, A)***.-->
+
+These slides capture what we have covered in the past week and where you are expected to with respect to the course materials be at this stage. They include optional activities and opportunities for you to learn material beyond what has been taught in this unit.
+
 <!--
-### Live Sessions
-
-The slides presented at live sessions, if any, will be made available here in reverse chronological order, i.e. the most recent first. Recordings of the live sessions are available via the associated Team ***COMS30026: Design Verification (Teaching Unit) 2021/22 (TB-1, A)***.
-
-* [Slides](LiveSessions/W8_COMS30026_Design_Verification_LiveSession.pdf) from live session on 19 November 2021
-* [Slides](LiveSessions/W7_COMS30026_Design_Verification_LiveSession.pdf) from live session on 10 November 2021
-* [Slides](LiveSessions/W5_COMS30026_Design_Verification_LiveSession.pdf) from live session on 27 October 2021
-* [Slides](LiveSessions/W4_COMS30026_Design_Verification_LiveSession.pdf) from live session on 20 October 2021
-* [Slides](LiveSessions/W3_COMS30026_Design_Verification_LiveSession.pdf) from live session on 13 October 2021
-* [Slides](LiveSessions/W2_COMS30026_Design_Verification_LiveSession.pdf) from live session on 6 October 2021
-* [Slides](LiveSessions/W1_COMS30026_Design_Verification_LiveSession.pdf) from live session on 29 September 2021
+* [Slides](StatusUpdate/W8_COMS30026_Design_Verification_StatusUpdate.pdf) from live session on 19 November 2021
+* [Slides](StatusUpdate/W7_COMS30026_Design_Verification_StatusUpdate.pdf) from live session on 10 November 2021
+* [Slides](StatusUpdate/W5_COMS30026_Design_Verification_StatusUpdate.pdf) from live session on 27 October 2021
+* [Slides](StatusUpdate/W4_COMS30026_Design_Verification_StatusUpdate.pdf) from live session on 20 October 2021
 -->
+* [Slides](StatusUpdate/W3_COMS30026_Design_Verification_StatusUpdate.pdf) Week 3
+* [Slides](StatusUpdate/W2_COMS30026_Design_Verification_StatusUpdate.pdf) Week 2
+<!--* [Slides](StatusUpdate/W1_COMS30026_Design_Verification_StatusUpdate.pdf) from live session on 29 September 2021-->
+
 
 ## EDA Software Access
 
