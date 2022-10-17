@@ -96,8 +96,8 @@ These slides capture what we have covered in the past week and where you are exp
 * [Slides](StatusUpdate/W8_COMS30026_Design_Verification_StatusUpdate.pdf) from live session on 19 November 2021
 * [Slides](StatusUpdate/W7_COMS30026_Design_Verification_StatusUpdate.pdf) from live session on 10 November 2021
 * [Slides](StatusUpdate/W5_COMS30026_Design_Verification_StatusUpdate.pdf) from live session on 27 October 2021
-* [Slides](StatusUpdate/W4_COMS30026_Design_Verification_StatusUpdate.pdf) from live session on 20 October 2021
 -->
+* [Week 4](StatusUpdate/W4_COMS30026_Design_Verification_StatusUpdate.pdf)
 * [Week 3](StatusUpdate/W3_COMS30026_Design_Verification_StatusUpdate.pdf)
 * [Week 2](StatusUpdate/W2_COMS30026_Design_Verification_StatusUpdate.pdf) 
 <!--* [Slides](StatusUpdate/W1_COMS30026_Design_Verification_StatusUpdate.pdf) from live session on 29 September 2021-->
