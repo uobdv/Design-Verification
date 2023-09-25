@@ -28,26 +28,26 @@ Students intending to take this unit should know that the unit requires a signif
 
 ## Lecture and lab times
 
-*Autumn Term 2022*
+*Autumn Term 2023*
 
-- Lectures are scheduled in weeks 1-5, 7-8 and 12 on Mondays, 9:00 and 17:00, and on Wednesdays, 9:00. Lecture theatres can be found in your timetable. Any changes to scheduled lecture times and lecture theatres will be announced during lectures and via Blackboard.
+- Lectures are scheduled in weeks 1-5, 8 and 12 (revision session). Please refer to the timetable for lecture times and locations. Any changes to scheduled lecture times and lecture theatres will be announced during lectures and via Blackboard.
 
-- Lecture recordings will be made available via Blackboard. There are between two and three hours of recordings per week. 
+- Lecture recordings will be made available via Blackboard. There are roughly three hours of recordings per week. 
 
 <!-- - Online synchronous sessions (named Lectures in the timetable) are scheduled at 10:00 on Wednesdays in weeks 1-5, 7-8 and also in week 12. We will use these to answer questions, to focus on specific topics that require interaction and/or debate, and to discuss the supplementary material (see below), e.g. you may be asked to read an article or a scientific paper and participate in a discussion. Any slides presented can be found under Live Sessions below.-->
 
-- Labs (called Seminars in your timetable) are scheduled in weeks 1-4 and 7-12 on Wednesdays at 14:00 in MVB 1.15. Labs are supervised by an experienced Teaching Assistant (TA). Labs can cover setting up remote access to the EDA tools, an introduction to using the EDA tools, help with using the various languages, methodologies, tools, etc. 
+- Labs (called Practicals in your timetable) are scheduled in weeks 1-5 and 7-8 on Wednesdays at 9:00 and Fridays at 17:00 in MVB 1.15. Labs are supervised by an experienced Teaching Assistant (TA). Labs can cover setting up remote access to the EDA tools, an introduction to using the EDA tools, help with using the various languages, methodologies, tools, etc. 
 
 - You are expected to engage with the supplementary material and the opportunities highlighted in the lectures and on this unit page.
 
 ## Making contact
 
-*Autumn Term 2022*
+*Autumn Term 2023*
 
 
 - Your main ways of getting help with this unit are:
-  1. Ask directly after the 9:00 lectures.
-  2. Ask the unit TA, ideally during the labs/seminars on Wednesdays.
+  1. Ask directly after the lectures.
+  2. Ask the unit TA, ideally during the labs/practicals on Wednesdays.
   3. Post your question on the online Blackboard forum for the unit.
   4. Ask a fellow student via Teams.
 
@@ -62,8 +62,8 @@ The slides provided in the table below may be updated with revised versions as n
 
 | #   | Week | Topic                                                             | Slides                                                                        | Supplementary material                                                                                                                                                                                                                                                   |
 |-----|--------------------------------------------------------------------------|-------------------------------------------------------------------------------|-------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 0   | Week 1 | Introduction to the Design Verification unit COMS30026       | [View](LiveSessions/W1_COMS30026_Design_Verification_Unit-Overview.pdf)                       | [The limits of Correctness](Supplementary/The_limits_of_Correctness.pdf) <br> from the [ACM Digital Library](https://dl.acm.org/citation.cfm?id=379512)                                                                                                        |
-| 1   | Week 1    | Introduction to Design Verification                          | [View](Lectures/Current/1_Introduction_to_DV_ALL-SLIDES_narrated_v7-plain.pdf)            | [ITRS Reports](http://www.itrs2.net/itrs-reports.html) <br> Read the paper by Harry Foster on [Why the Design Productivity Gap never happened](/Supplementary/Why-the-DV-Productivity-Gap-never-happened.pdf)                                                                                                        |
+| 0   | Week 1 | Introduction to the Design Verification unit COMS30026       | [View](LiveSessions/W1_COMS30026_Design_Verification_Unit-Overview-2023-4.pdf)                       | [The limits of Correctness](Supplementary/The_limits_of_Correctness.pdf) <br> from the [ACM Digital Library](https://dl.acm.org/citation.cfm?id=379512)                                                                                                        |
+| 1   | Week 1    | Introduction to Design Verification                          | [View](Lectures/Current/1_Introduction_to_DV_ALL-SLIDES_v9.pdf)            | [ITRS Reports](http://www.itrs2.net/itrs-reports.html) <br> Read the paper by Harry Foster on [Why the Design Productivity Gap never happened](/Supplementary/Why-the-DV-Productivity-Gap-never-happened.pdf)                                                                                                        |
 | 2.1 | Week 1    | Verification Hierarchy                                       | [View](Lectures/Current/2_Verification_Hierarchy_plain.pdf)                   | [Foster: Provably Correct Design](Supplementary/Provably_Correct_Design.pdf)  <br> Read the paper on [System Deadlocks](/Supplementary/System_Deadlocks-Four_necessary_and_sufficient_conditions_for_deadlock.pdf)                                                                                                                                                                                           |
 | 2.2 | Week 1/2  | Driving & Checking                                           | [View](Lectures/Current/2_Fundamentals of Simulation-based Verification_plain.pdf) | Explore the [foretellix blog](https://blog.foretellix.com/) <br> Review the 2020 Wilson Research Group Functional Verification Study <br> [Slides](/WilsonResearchGroupFunctionalVerificationStudy/2020-WRGFV-Study/2020-WrG-FV-Study-Webinar-Oct13.pdf), [FPGA Trend Report](/WilsonResearchGroupFunctionalVerificationStudy/2020-WRGFV-Study/fpga-trend-report_2020-wilson-research-verification-study_hfoster.pdf), [IC ASIC Trend Report](/WilsonResearchGroupFunctionalVerificationStudy/2020-WRGFV-Study/ic-asic-trend-report_2020-wilson-research-verification-study_hfoster.pdf) <br> [2022 Wilson Research Group Functional Verification Study announced!](https://s3.amazonaws.com/public.verification.academy/wrg/preview_2022-wilson-resesearch-verification-study_hfoster.mp4)                                                                                                                                                                                        |
 | 3   | Week 2    | Verification Tools                                           | [plain](Lectures/Current/3_VerificationTools_narrated_v6-plain.pdf) <br> [with ink](Lectures/Current/3_VerificationTools_narrated_v6-ink.pdf)           | [Verification challenges](Supplementary/VerificationChallenges.TVS.pdf)<br>[Intelligent Testing (Dot Graham)](Supplementary/IntelligentTesting.DotGraham.pdf) <br> [EWD 340: The humble programmer](https://www.cs.utexas.edu/users/EWD/ewd03xx/EWD340.PDF)                                                                                                                                                                                                              |
@@ -86,20 +86,21 @@ The slides provided in the table below may be updated with revised versions as n
 
 <!--[Download full course content (ALL slides) as a ZIP archive.](/Lectures/Current.zip)-->
 
-### Weekly Status Updates 
+<!--### Weekly Status Updates -->
 
 <!--The slides presented at live sessions, if any, will be made available here in reverse chronological order, i.e. the most recent first. Recordings of the live sessions are available via the associated Team ***COMS30026: Design Verification (Teaching Unit) 2021/22 (TB-1, A)***.-->
 
-These slides capture what we have covered in the past week and where you are expected to be with respect to the course materials at this stage. They include optional activities and opportunities for you to learn material beyond what has been taught in this unit.
+<!--These slides capture what we have covered in the past week and where you are expected to be with respect to the course materials at this stage. They include optional activities and opportunities for you to learn material beyond what has been taught in this unit. -->
 
 <!--
 * [Slides](StatusUpdate/W8_COMS30026_Design_Verification_StatusUpdate.pdf) from live session on 19 November 2021
 * [Slides](StatusUpdate/W7_COMS30026_Design_Verification_StatusUpdate.pdf) from live session on 10 November 2021
 * [Slides](StatusUpdate/W5_COMS30026_Design_Verification_StatusUpdate.pdf) from live session on 27 October 2021
 -->
+<!--
 * [Week 4](StatusUpdate/W4_COMS30026_Design_Verification_StatusUpdate.pdf)
 * [Week 3](StatusUpdate/W3_COMS30026_Design_Verification_StatusUpdate.pdf)
-* [Week 2](StatusUpdate/W2_COMS30026_Design_Verification_StatusUpdate.pdf) 
+* [Week 2](StatusUpdate/W2_COMS30026_Design_Verification_StatusUpdate.pdf) -->
 <!--* [Slides](StatusUpdate/W1_COMS30026_Design_Verification_StatusUpdate.pdf) from live session on 29 September 2021-->
 
 
