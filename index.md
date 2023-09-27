@@ -127,6 +127,7 @@ You may also want to check whether you can call Cadence SpecMan and JasperGold:
 > specview &
 > jaspergold &
 ```
+The simulator for Specman only works within a virtual machine. The guide to access EDA tools in a virtual machine is in [Access EDA tools in a virtual machine](/VirtualMachine_Instructions.pdf).
 
 In both cases the tools should come up with GUI interfaces. If this works for you, then you are ready to start the exercises and, where applicable, your coursework.
 
