@@ -18,7 +18,7 @@ Students intending to take this unit should know that the unit requires a signif
 
 In return, on successful completion of this unit, you will be able to add to your CV knowledge and skills in the following areas:
 - the Verilog Hardware Description Language, 
-- EDA tools including ModelSim/QuestaSim and the Cadence verification tools, 
+- EDA tools including QuestaSim (ModelSim) and the Cadence verification tools, 
 - the e Verification Language, 
 - Testbench Automation Techniques, 
 - Constraint-Based Pseudo Random Test Generation, 
@@ -108,7 +108,7 @@ The slides provided in the table below may be updated with revised versions as n
 
 ## EDA Software Access
 
-You will require access to two EDA tools for this module: Siemens ModelSim/QuestaSim and Cadence SpecMan and JasperGold. 
+You will require access to two EDA tools for this module: Siemens QuestaSim (ModelSim) and Cadence SpecMan and JasperGold. 
 
 The EDA tools are accessible in the Linux labs in MVB, 2.11 and 1.15, and also remotely. To set up remote access you need to follow the instructions on [how to set up X2GO](https://uob.sharepoint.com/sites/itservices/SitePages/fits-engineering-linux-x2go.aspx).
 
@@ -119,7 +119,7 @@ The following are the command line instructions you can use from a terminal once
 > module load course/COMS30026
 ```
 
-You should then be able to call ModelSim/QuestaSim from the command line:
+You should then be able to call QuestaSim (ModelSim) from the command line:
 ```
 > vsim &
 ```
@@ -138,7 +138,7 @@ You can also download this worksheet on [how to use X2GO for remote access](/X2G
 
 ## Exercises
 
-The exercises are designed to further your understanding of Verilog, the simulator and the e language, and to give you an opportunity to practice the material covered during the lectures. The ModelSim/QuestaSim simulator and SpecMan Elite are installed under Linux, for access instructions please see above. 
+The exercises are designed to further your understanding of Verilog, the simulator and the e language, and to give you an opportunity to practice the material covered during the lectures. The QuestaSim (ModelSim) simulator and SpecMan Elite are installed under Linux, for access instructions please see above. 
 
 ### Exercise 1
 
