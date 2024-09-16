@@ -6,15 +6,17 @@ description: Design Verification module (COMS30026) at the University of Bristol
 
 ## Welcome to Design Verification
 
-Hello, welcome to the Design Verification module (COMS30026) website. Here you'll find all the course content and related information. Lecture recordings and information on coursework (where applicable) are hosted privately on Blackboard at the University of Bristol. For further information about this course, please contact Kerstin Eder.
+Hello, welcome to the Design Verification module (COMS30026) website. Here you will find all the course content and related information. Lecture recordings and information on coursework (where applicable) are hosted privately on Blackboard at the University of Bristol. For further information about this course, please contact Kerstin Eder.
 
 ## Overview
 
-This unit familiarises students with the state of the art in Design Verification, and gives them the technical background plus some of the practical skills expected from a professional design verification engineer. More details about the unit have been captured during an interview Kerstin gave at [DAC'2012](https://youtu.be/6lovqBEmryM).
+This unit familiarises students with the state of the art in Design Verification, and gives them the technical background plus some of the practical skills expected from a professional design verification engineer. 
 
 ## What you need to know prior to taking this unit and what you can expect to learn
 
-Students intending to take this unit should know that the unit requires a significant amount of initiative and motivation, independent study, e.g. teaching yourself a new language and familiarising yourself with EDA tools in the labs, and diligent time management to meet the learning objectives. Essential pre-requisites to take this unit include programming skills, software engineering skills and a basic understanding of computer architecture. In return, on successful completion of this unit, you will be able to add to your CV knowledge of and skills in the following areas:
+Students intending to take this unit should know that the unit requires a significant amount of initiative and motivation, independent study, e.g. teaching yourself a new language and familiarising yourself with EDA tools in the labs, and diligent time management to meet the learning objectives. Essential pre-requisites to take this unit include good programming and software engineering skills and a basic understanding of computer architecture.
+
+In return, on successful completion of this unit, you will be able to add to your CV knowledge and skills in the following areas:
 - the Verilog Hardware Description Language, 
 - EDA tools including ModelSim/QuestaSim and the Cadence verification tools, 
 - the e Verification Language, 
@@ -28,27 +30,27 @@ Students intending to take this unit should know that the unit requires a signif
 
 ## Lecture and lab times
 
-*Autumn Term 2023*
+*Autumn Term 2024*
 
-- Lectures are scheduled in weeks 1-5, 8 and 12 (revision session). Please refer to the timetable for lecture times and locations. Any changes to scheduled lecture times and lecture theatres will be announced during lectures and via Blackboard.
+- Lectures are scheduled in weeks 1-5, 7-8, and in week 12 we will have a 1h revision session. Please refer to the timetable for lecture times and locations. Any changes to scheduled lecture times and lecture theatres will be announced during lectures and via Blackboard. 
 
-- Lecture recordings will be made available via Blackboard. There are roughly three hours of recordings per week. 
+- Lecture recordings will be made available via Blackboard. There are roughly three hours of recordings per week, though you should attend the live lectures as timetabled, and use the recordings only for revision.
 
 <!-- - Online synchronous sessions (named Lectures in the timetable) are scheduled at 10:00 on Wednesdays in weeks 1-5, 7-8 and also in week 12. We will use these to answer questions, to focus on specific topics that require interaction and/or debate, and to discuss the supplementary material (see below), e.g. you may be asked to read an article or a scientific paper and participate in a discussion. Any slides presented can be found under Live Sessions below.-->
 
-- Labs (called Practicals in your timetable) are scheduled in weeks 1-5 and 7-8 on Wednesdays at 9:00 and Fridays at 17:00 in MVB 1.15. Labs are supervised by an experienced Teaching Assistant (TA). Labs can cover setting up remote access to the EDA tools, an introduction to using the EDA tools, help with using the various languages, methodologies, tools, etc. 
+- Labs (called Practicals in your timetable) are scheduled in weeks 1-5 and 7-8 on Wednesdays at 12:00 and Fridays at 12:00 in MVB. Labs will be supervised by a Teaching Assistant (TA). Labs can cover setting up remote access to the EDA tools, an introduction to using the EDA tools, help with using the various languages, methodologies, tools, etc. New material and demos will normally be covered in the Wednesday lab session. In general, the lab session on Fridays offers an opportunity for you to catch up.  
 
 - You are expected to engage with the supplementary material and the opportunities highlighted in the lectures and on this unit page.
 
 ## Making contact
 
-*Autumn Term 2023*
+*Autumn Term 2024*
 
 
 - Your main ways of getting help with this unit are:
   1. Ask directly after the lectures.
   2. Ask the unit TA, ideally during the labs/practicals on Wednesdays.
-  3. Post your question on the online Blackboard forum for the unit.
+  3. Post your question on the online Blackboard forum for the unit after checking the forum content.
   4. Ask a fellow student via Teams.
 
 - **Please avoid sending Kerstin an email to get help as this may not result in the type of help you may need.** This is because Kerstin gets far too many emails per day to process them all in a timely manner.
@@ -106,7 +108,7 @@ The slides provided in the table below may be updated with revised versions as n
 
 ## EDA Software Access
 
-You will require access to two EDA tools for this module: MentorGraphic's ModelSim/QuestaSim and Cadence's SpecMan and JasperGold. 
+You will require access to two EDA tools for this module: Siemens ModelSim/QuestaSim and Cadence SpecMan and JasperGold. 
 
 The EDA tools are accessible in the Linux labs in MVB, 2.11 and 1.15, and also remotely. To set up remote access you need to follow the instructions on [how to set up X2GO](https://uob.sharepoint.com/sites/itservices/SitePages/fits-engineering-linux-x2go.aspx).
 
@@ -174,7 +176,7 @@ Files needed for the ModelSim/QuestaSim introduction:
 - [mux421_structural_faulty.v](ModelSim/src/mux421_structural_faulty.v)
 - [mux421_dataflow_faulty.v](ModelSim/src/mux421_dataflow_faulty.v)
 - [mux421_behavioural_faulty.v](ModelSim/src/mux421_behavioural_faulty.v)
-- [mux421_faulty_testbench.v](ModelSim/src/mux421_faulty_testbench.v) - Only download this one if you don't want to (learn how to) write your own.
+- [mux421_faulty_testbench.v](ModelSim/src/mux421_faulty_testbench.v) - Only download this one if you do not want to (learn how to) write your own.
 
 - [mux_int.v](ModelSim/src/mux_int.v)
 - [mux_int_test.v](ModelSim/src/mux_int_test.v)
