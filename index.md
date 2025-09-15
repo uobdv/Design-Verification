@@ -38,7 +38,7 @@ In return, on successful completion of this unit, you will be able to add to you
 
 <!-- - Online synchronous sessions (named Lectures in the timetable) are scheduled at 10:00 on Wednesdays in weeks 1-5, 7-8 and also in week 12. We will use these to answer questions, to focus on specific topics that require interaction and/or debate, and to discuss the supplementary material (see below), e.g. you may be asked to read an article or a scientific paper and participate in a discussion. Any slides presented can be found under Live Sessions below.-->
 
-- Labs (called Practicals in your timetable) are scheduled in weeks 1-5 and 7-8 on Wednesdays at 12:00 and Fridays at 12:00 in MVB. Labs will be supervised by a Teaching Assistant (TA). Labs can cover setting up remote access to the EDA tools, an introduction to using the EDA tools, help with using the various languages, methodologies, tools, etc. New material and demos will normally be covered in the Wednesday lab session. In general, the lab session on Fridays offers an opportunity for you to catch up.  
+- Labs (called Practicals in your timetable) are scheduled in weeks 1-5 and 7-8 on Wednesdays at 9:00 and Thursdays at 12:00 in MVB. Labs may be supervised by a Teaching Assistant (TA). Labs can cover setting up remote access to the EDA tools, an introduction to using the EDA tools, help with using the various languages, methodologies, tools, etc. New material and demos will normally be covered in the Wednesday lab session. In general, the lab session on Thursdays offers an opportunity for you to catch up and work on your own.  
 
 - You are expected to engage with the supplementary material and the opportunities highlighted in the lectures and on this unit page.
 
