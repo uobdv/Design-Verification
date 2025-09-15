@@ -58,8 +58,7 @@ In return, on successful completion of this unit, you will be able to add to you
 
 ## Unit Content
 
-(###Lectures)
-### Lectures
+### Lectures {#Lectures}
 
 The slides provided in the table below may be updated with revised versions as necessary. Please note that the lectures and recordings may not cover all slides; some of the slides not covered may provide further information for exercises and self study. 
 
