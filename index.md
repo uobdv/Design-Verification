@@ -30,7 +30,7 @@ In return, on successful completion of this unit, you will be able to add to you
 
 ## Lecture and lab times
 
-*Autumn Term 2024*
+*Autumn Term 2025*
 
 - Lectures are scheduled in weeks 1-5, 7-8, and in week 12 we will have a 1h revision session. Please refer to the timetable for lecture times and locations. Any changes to scheduled lecture times and lecture theatres will be announced during lectures and via Blackboard. 
 
@@ -44,12 +44,12 @@ In return, on successful completion of this unit, you will be able to add to you
 
 ## Making contact
 
-*Autumn Term 2024*
+*Autumn Term 2025*
 
 
 - Your main ways of getting help with this unit are:
   1. Ask directly after the lectures.
-  2. Ask the unit TA, ideally during the labs/practicals on Wednesdays.
+  2. Ask during the labs/practicals on Wednesdays.
   3. Post your question on the online Blackboard forum for the unit after checking the forum content.
   4. Ask a fellow student via Teams.
 
@@ -58,6 +58,7 @@ In return, on successful completion of this unit, you will be able to add to you
 
 ## Unit Content
 
+(###Lectures)
 ### Lectures
 
 The slides provided in the table below may be updated with revised versions as necessary. Please note that the lectures and recordings may not cover all slides; some of the slides not covered may provide further information for exercises and self study. 
